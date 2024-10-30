@@ -1,10 +1,10 @@
 # DF_AssistVirtual - Portfólio Pessoal
 
-Site de portfólio pessoal para uma Assistente Virtual Financeira, desenvolvido para ser totalmente responsivo e intuitivo, apresentando serviços de gestão e consultoria financeira de forma prática.
+Site pessoal de uma Assistente Virtual Financeira, com foco em serviços de gestão financeira, consultoria e planejamento para organização financeira personalizada.
 
 ## Visão Geral
 
-Este projeto é um site de portfólio pessoal que exibe os serviços, experiência e especializações de uma Assistente Virtual Financeira. Criado com **HTML**, **CSS** e **JavaScript**, o site é otimizado para uma navegação fluida em dispositivos móveis e desktops.
+Este projeto é um site de portfólio pessoal que exibe os serviços, experiência e especializações de uma Assistente Virtual. Criado com **HTML**, **CSS** e **JavaScript**, o site é otimizado para uma navegação fluida em dispositivos móveis e desktops.
 
 ## Funcionalidades
 
