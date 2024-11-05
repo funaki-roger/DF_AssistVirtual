@@ -8,13 +8,13 @@
     --hue-color:242;
 
 /* HSL Color Mode */
---skin-color: hsl(0, 0%, 0%); /* Um cinza médio para componentes de destaque */
---title-color: hsl(0, 0%, 95%); /* Branco para títulos para contraste */
---text-color: hsl(0, 0%, 3%); /* Branco para o texto para melhor legibilidade */
---body-color: hsl(0, 85%, 43%); /* Fundo cinza escuro para o corpo */
---box-color: hsl(0, 0%, 100%); /* Cinza médio para caixas, mais escuro para contraste */
---scroll-bar-color: hsl(0, 1%, 26%); /* Cinza escuro para a barra de rolagem */
---scroll-thumb-color: hsl(0, 0%, 0%); /* Cinza um pouco mais escuro para o thumb da barra de rolagem */
+--skin-color: hsl(0, 0%, 0%); 
+--title-color: hsl(0, 0%, 95%); 
+--text-color: hsl(0, 0%, 3%); 
+--body-color: hsl(0, 85%, 43%); 
+--box-color: hsl(0, 0%, 53%); 
+--scroll-bar-color: hsl(0, 1%, 26%); 
+--scroll-thumb-color: hsl(0, 0%, 0%); 
 
 
     
@@ -359,7 +359,7 @@ input{
 }
 
 /*===== Buttons =====*/
-.button{
+.button {
     display: inline-flex;
     align-items: center;
     column-gap: .5rem;
@@ -370,26 +370,25 @@ input{
     font-weight: var(--font-medium);
     position: relative;
     z-index: 1;
-    }
+    overflow: hidden;
+}
 
-.button::after{
+.button::before {
+    content: "";
     position: absolute;
-    content: '';
-    left: 0;
     top: 0;
-    width: 100%;
+    left: 0;
+    width: 0%; /* Inicia com 0% da largura */
     height: 100%;
-    background-color: var(--skin-color);
+    background-color: rgb(0, 0, 0); /* Ajuste a cor aqui */
+    transition: width 0.3s ease; /* Transição suave */
     z-index: -1;
-    transform-origin: center;
-    transform: scale(0);
-    border-radius: .25rem;
-    transition: .3s;
 }
 
-.button:hover::after{
-    transform: scale(1);
+.button:hover::before {
+    width: 100%; /* Expande para 100% da largura */
 }
+
 
 .button__icon{
     font-size: 1.25rem;
@@ -403,6 +402,52 @@ input{
 
 .about__container{
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    align-items: center;
+}
+
+.about__img{
+    width: 450px;
+    border-radius: 0.75rem;
+    justify-self: center;
+}
+
+.about__heading{
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-75);
+}
+
+.about__description{
+    text-align: justify;
+    padding-right: 6rem;
+    margin-bottom: var(--mb-2);
+}
+
+.about__info{
+    grid-template-columns: repeat(3, 165px);
+    column-gap: .5rem;
+    margin-bottom: var(--mb-3);
+}
+
+.about__box{
+        text-align: center;
+    border-radius: .25rem;
+    padding: 1rem 1.25rem;
+    background-color: var(--box-color);
+}
+
+.about__icon{
+    font-size: 1.3rem;
+    color: var(--skin-color);
+    margin-bottom: var(--mb-0-75);
+}
+
+.about__title{
+    font-size: var(--small-font-size);
+}
+
+.about__subtitle{
+    font-size: var(--smaller-font-size);
 }
 
 /*===== Qualification Section =====*/
