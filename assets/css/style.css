@@ -304,29 +304,31 @@ input{
 
 .home__title{
     font-size: var(--h1-font-size);
+    max-width: 690px;
+    text-align: justify;
 }
 
 .home__title span{
     font-size: var(--h1-font-size);
     font-weight: var(--font-bold);
     color: var(--skin-color);
-}
+    text-align: justify;
+    }
 
 .home__subtitle{
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-0-75);
-}
-
-.home__subtitle span{
-    font-weight: var(--font-bold);
-    color: var(--skin-color);
+    max-width: 690px;
+    text-align: justify;
 }
 
 .home__description{
+    font-size: var(--h4-font-size);
     max-width: 690px;
     margin-bottom: var(--mb-2); 
-    color: var(--skin-color);   
+    color: var(--skin-color);  
+    text-align: justify; 
 }
 
 
@@ -430,7 +432,7 @@ input{
 }
 
 .about__box{
-        text-align: center;
+    text-align: center;
     border-radius: .25rem;
     padding: 1rem 1.25rem;
     background-color: var(--box-color);
