@@ -1,6 +1,8 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -11,7 +13,7 @@
 --skin-color: hsl(0, 0%, 0%); 
 --title-color: hsl(0, 0%, 95%); 
 --text-color: hsl(0, 0%, 3%); 
---body-color: hsl(0, 85%, 43%); 
+--body-color: hsl(0, 0%, 53%); 
 --box-color: hsl(0, 0%, 53%); 
 --scroll-bar-color: hsl(0, 1%, 26%); 
 --scroll-thumb-color: hsl(0, 0%, 0%); 
@@ -152,32 +154,36 @@ input{
     position: fixed;
     width: 100px;
     height: 100vh;
-    background-color: rgba(80, 80, 80, 0.9); /* Usando rgba para transparência */
+    background-color: rgba(80, 80, 80, 0.9); 
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
-    background-size: 10px 10px; /* Tamanho do padrão da textura */
+    background-size: 10px 10px; 
     border-right: 1px solid var(--box-color);
-    color: var(--text-color); /* Define a cor do texto na barra lateral */
+    color: var(--text-color); /
 }
 
 
-.nav__logo{
+.nav__logo {
     position: absolute;
     left: 0;
     right: 0;
     top: 1.8rem;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--skin-color);
-    text-align: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 60%;
+    background-color: var(--body-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: auto;
 }
 
 .nav__logo-text{
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     color: var(--title-color);
     font-weight: var(--font-bold);
     line-height: 40px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
 }
 
 
@@ -207,7 +213,7 @@ input{
     color: var(--title-color);
     font-weight: var(--font-medium);
     position: relative;
-    transition: .4s;
+    transition: .3s;
 }
 
 .btn__share{
@@ -216,6 +222,12 @@ input{
     left: 0;
     right: 0;
     text-align: center;
+    transition: .4s;
+}
+
+.btn__share:hover{
+    transform: translateY(.75rem);
+    cursor: pointer;
 }
 
 .social__share{
@@ -279,7 +291,7 @@ input{
     width: 1rem;
     height: 2px;
     background-color: var(--text-color);
-    right: -10%; /* ajuste da barra social midia */
+    right: -10%; 
     top: 50%;
 }
 
@@ -295,7 +307,7 @@ input{
 }
 
 .home__social-link:hover{
-    transform: translateY(.25rem);
+    transform: translateY(.65rem);
 }
 
 .home__img{
@@ -453,7 +465,105 @@ input{
 }
 
 /*===== Qualification Section =====*/
+.qualification__container{
+    grid-template-columns: repeat(2, 700px);
+    column-gap: 3rem;
+    justify-content: center;
+    text-align: justify;
+}
 
+.qualification__title{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-2);
+}
+
+.timeline__item{
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: var(--mb-1);
+}
+
+.timeline__item:last-child{
+    margin-bottom: 0;
+}
+
+.timeline__item::before {
+    content: '';
+    width: 1px;
+    position: absolute;
+    left: .48rem;
+    top: 0;
+    height: 100%;
+    background-color: var(--skin-color);
+}
+
+.circle__dot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 20%;
+    transition: transform 1.2s ease;
+    border: 2px solid var(--skin-color); 
+    background-color: var(--skin-color); 
+}
+
+.timeline__item:hover .circle__dot {
+    transform: translateY(95px); /* Move o círculo para cima */
+}
+
+.circle__dot-experience1, .circle__dot-experience2{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 20%;
+    transition: transform 2.2s ease;
+    border: 2px solid var(--skin-color); 
+    background-color: var(--skin-color); 
+}
+
+.timeline__item:hover .circle__dot-experience1 {
+    transform: translateY(472px); /* Move o círculo para cima */
+}
+
+.timeline__item:hover .circle__dot-experience2 {
+    transform: translateY(555px); /* Move o círculo para cima */
+}
+
+.timeline__item:hover .circle__dot{
+    background-color: var(--body-color);
+}
+
+.timeline__item:hover .circle__dot-experience1{
+    background-color: var(--body-color);
+}
+
+.timeline__item:hover .circle__dot-experience2{
+    background-color: var(--body-color);
+}
+
+.timeline__title{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-0-25);
+}
+
+.timeline__text{
+    font-size: var(--smaller-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.timeline__date, .timeline__certificate{
+    display: flex;
+    align-items: center;
+    column-gap: .4rem;
+    font-size: var(--small-font-size);
+    color: var(--skin-color);
+}
 
 /*===== Skills Section =====*/
 
