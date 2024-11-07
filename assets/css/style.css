@@ -158,7 +158,7 @@ input{
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
     background-size: 10px 10px; 
     border-right: 1px solid var(--box-color);
-    color: var(--text-color); /
+    color: var(--text-color); 
 }
 
 
@@ -170,11 +170,11 @@ input{
     width: 60px;
     height: 60px;
     border-radius: 60%;
-    background-color: var(--body-color);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
+    background-color: hsl(0, 0%, 53%); 
 }
 
 .nav__logo-text{
@@ -568,23 +568,140 @@ input{
     color: var(--skin-color);
 }
 
-/*===== Skills Section =====*/
-
-
-/*===== Work Section =====*/
-
-
-/* Active Item Work */
-
-
-/* Portfolio Popup */
-
 
 /*===== Services Section =====*/
+.services__container{
+    grid-template-columns: repeat(3, 250px);
+    justify-content: center;
+    column-gap: 1.8rem;
+}
 
+.services__content{
+    position: relative;
+    background-color: var(--box-color);
+    padding: 3rem 0 2rem 2.5rem;
+    border-radius: .25rem;
+}
+
+.services__icon{
+    display: block;
+    font-size: 1.8rem;
+    color: var(--skin-color);
+    margin-bottom: var(--mb-1);
+}
+
+.services__content.bronze .services__icon {
+    color: #dc9752fa; /* cor de bronze */
+}
+
+.services__content.prata .services__icon {
+    color: #a5a5a5; /* cor de prata */
+}
+
+.services__content.ouro .services__icon {
+    color: #c9b332; /* cor de ouro */
+}
+
+
+.services__title{
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-1);
+    font-weight: var(--font-medium);
+}
+
+.services__button{
+    color: var(--skin-color);
+    font-size: var(--small-font-size);
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    cursor: pointer;
+}
+
+.services__button-icon{
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.services__button:hover .services__button-icon{
+    transform: translateX(.25rem);
+}
+
+.services__modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(173, 169, 169, 0.374);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    z-index: var(--z-modal);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.services__modal-content{
+    width: 955px;
+    position: relative;
+    background-color: var(--box-color);
+    padding: 2rem 2.5rem 2.5rem;
+    border-radius: .5rem
+}
+
+.services__modal-close{
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    font-size: 1rem;
+    color: var(--skin-color);
+    cursor: pointer;
+}
+
+.services__modal-title,
+.services__modal-description{
+    text-align: center;
+}
+
+.services__modal-title{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1-5);
+}
+
+.services__modal-description{
+    font-size: var(--small-font-size);
+    padding: 0 3.5rem;
+    margin-bottom: var(--mb-2);
+}
+
+.services__modal-services{
+    row-gap: var(--mb-0-75);
+}
+
+.services__modal-service{
+    display: flex;
+    align-items: first baseline;
+    column-gap: .6rem;
+}
+
+.services__modal-icon{
+    color: var(--skin-color);
+    font-size: 1.5rem;
+}
+
+.services__modal-info{
+    font-size: var(--small-font-size);
+}
 
 /* Active Modal*/
-
+.active-modal{
+    opacity: 1;
+    visibility: visible;
+}
 
 /*===== Testimonial Section =====*/
 
