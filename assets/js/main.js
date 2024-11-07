@@ -15,7 +15,7 @@
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
 
 
-/*===== Link Active Work =====*/
+/*===== Nav Active Link =====*/
 
 
 /*===== Work Popup =====*/
