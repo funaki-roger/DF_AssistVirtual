@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -12,9 +12,10 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
     <!--========== SWIPER CSS ==========-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
 
+    <!--========== BOXICONS ==========-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!--========== MAIN CSS ==========-->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -84,7 +85,7 @@
                     <h3 class="home__subtitle">Organização, eficiência e foco no que importa!</h3>
                     <p class="home__description">Aqui, entendemos o valor de cada minuto do seu dia, e nossa missão é oferecer uma assistência virtual 
                         que vai além do suporte: uma parceria estratégica para ajudar você a alcançar mais! </p>  
-                        <a href="sobre" class="button"><i class="bi bi-person-check"></i>Saiba mais!</a>
+                        <a href="#sobre" class="button"><i class="bi bi-person-check"></i>Saiba mais!</a>
                 </div>
 
                 <div class="my__info">
@@ -610,65 +611,68 @@
         </section>
 
         <!--===== Feedback =====-->
-        <section class="testimonials section" id="feedback">
+        <section class="testimonial section" id="feedback">
             <h2 data-heading="Transformando Ideias em Resultados" class="section__title">Feedbacks!</h2>
         
-            <div class="testimonials__container container">
-                <div>
-                    <div>
-                        <div class="testimonial__card">
-                            <div class="testimonial__quote">
-                                <i class='bx bxs-quote-alt-left'></i>
-                            </div>
-                            <p class="testimonial__description">Tive o prazer de trabalhar com a Dayane, uma excelente profissional. Totalmente dedica e zelosa com o seu trabalho. Demostrou ser uma pessoa integra de extrema confiança. 
-                                Durante a sua passagem pela empresa, ela foi colaborativa com todos os setores. Desenvolveu uma ótima relação com a equipe e clientes.</p>
-                                <h3 class="testimonial__date">24 de outubro de 2020, Paloma trabalhava com Dayane mas em equipes diferentes</h3>
-                                <div class="testimonial__profile">
-                                    <img src="assets/img/paloma.png" alt="" class="testimonial_profile-img">
-
-                                    <div class="testimonial__profile-data">
-                                        <span class="testimonial__profile-name">Paloma Santos</span>
-                                        <span class="testimonial__profile-detail">Comunicação Interna e Externa | Engajamento & Desenvolvimento</span>
-                                    </div>
-                                </div>
+            <div class="testimonials__container container swiper">
+                <!-- Este div envolve todos os slides -->
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="testimonial__card swiper-slide">
+                        <div class="testimonial__quote">
+                            <i class='bx bxs-quote-left'></i>
                         </div>
-
-                        <div class="testimonial__card">
-                            <div class="testimonial__quote">
-                                <i class='bx bxs-quote-alt-left'></i>
+                        <p class="testimonial__description">Tive o prazer de trabalhar com a Dayane, uma excelente profissional. Totalmente dedica e zelosa com o seu trabalho. Demostrou ser uma pessoa integra de extrema confiança. 
+                            Durante a sua passagem pela empresa, ela foi colaborativa com todos os setores. Desenvolveu uma ótima relação com a equipe e clientes.</p>
+                        <h3 class="testimonial__date">24 de outubro de 2020, Paloma trabalhava com Dayane mas em equipes diferentes</h3>
+                        <div class="testimonial__profile">
+                            <img src="assets/img/paloma.png" alt="" class="testimonial_profile-img">
+                            <div class="testimonial__profile-data">
+                                <span class="testimonial__profile-name">Paloma Santos</span>
+                                <span class="testimonial__profile-detail">Comunicação Interna e Externa | Engajamento & Desenvolvimento</span>
                             </div>
-                            <p class="testimonial__description">A Day (como carinhosamente a chamava), é o tipo de profissional que deixa o ambiente de trabalho 
-                                "mais leve". Sempre foi muito dedicada, disponível e cuidadosa para tirar as dúvidas de todos os colaboradores da empresa.
-                                Eu a recomendo sem dúvidas, merece sempre todo o sucesso!</p>
-                                <h3 class="testimonial__date">Em 16 de março de 2021, Caroline trabalhava com Dayane mas em equipes diferentes</h3>
-                                <div class="testimonial__profile">
-                                    <img src="assets/img/caroline.png" alt="" class="testimonial_profile-img">
-
-                                    <div class="testimonial__profile-data">
-                                        <span class="testimonial__profile-name">Caroline Ramos</span>
-                                        <span class="testimonial__profile-detail">Publicitária | Comunicação e Marketing | Produção Audiovisual | Design Gráfico</span>
-                                    </div>
-                                </div>
                         </div>
-
-                        <div class="testimonial__card">
-                            <div class="testimonial__quote">
-                                <i class='bx bxs-quote-alt-left'></i>
+                    </div>
+            
+                    <!-- Slide 2 -->
+                    <div class="testimonial__card swiper-slide">
+                        <div class="testimonial__quote">
+                            <i class='bx bxs-quote-left'></i>
+                        </div>
+                        <p class="testimonial__description">A Day (como carinhosamente a chamava), é o tipo de profissional que deixa o ambiente de trabalho 
+                            "mais leve". Sempre foi muito dedicada, disponível e cuidadosa para tirar as dúvidas de todos os colaboradores da empresa.
+                            Eu a recomendo sem dúvidas, merece sempre todo o sucesso!</p>
+                        <h3 class="testimonial__date">Em 16 de março de 2021, Caroline trabalhava com Dayane mas em equipes diferentes</h3>
+                        <div class="testimonial__profile">
+                            <img src="assets/img/caroline.png" alt="" class="testimonial_profile-img">
+                            <div class="testimonial__profile-data">
+                                <span class="testimonial__profile-name">Caroline Ramos</span>
+                                <span class="testimonial__profile-detail">Publicitária | Comunicação e Marketing | Produção Audiovisual | Design Gráfico</span>
                             </div>
-                            <p class="testimonial__description">Excelente profissional com facilidade de desenvolver suas tarefas e rotinas com perfeição. Foi um prazer trabalhar com você.</p>
-                                <h3 class="testimonial__date">Em 7 de novembro de 2024, Jonathan trabalhava com Dayane na mesma equipe</h3>
-                                <div class="testimonial__profile">
-                                    <img src="assets/img/jhon.png" alt="" class="testimonial_profile-img">
-
-                                    <div class="testimonial__profile-data">
-                                        <span class="testimonial__profile-name">Jonathan Moura Ferreira</span>
-                                        <span class="testimonial__profile-detail">Financial Business Analyst</span>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+            
+                    <!-- Slide 3 -->
+                    <div class="testimonial__card swiper-slide">
+                        <div class="testimonial__quote">
+                            <i class='bx bxs-quote-left'></i>
+                        </div>
+                        <p class="testimonial__description">Excelente profissional com facilidade de desenvolver suas tarefas e rotinas com perfeição. Foi um prazer trabalhar com você.</p>
+                        <h3 class="testimonial__date">Em 7 de novembro de 2024, Jonathan trabalhava com Dayane na mesma equipe</h3>
+                        <div class="testimonial__profile">
+                            <img src="assets/img/jhon.png" alt="" class="testimonial_profile-img">
+                            <div class="testimonial__profile-data">
+                                <span class="testimonial__profile-name">Jonathan Moura Ferreira</span>
+                                <span class="testimonial__profile-detail">Financial Business Analyst</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Div para a paginação -->
+                <div class="swiper-pagination"></div>
             </div>
+            
         </section>
         
         <!--===== FOOTER =====-->
