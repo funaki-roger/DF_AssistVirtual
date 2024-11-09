@@ -1,13 +1,10 @@
 /*=============== SHOW SIDEBAR ===============*/
 
-
 /*===== SIDEBAR SHOW =====*/
 /* Validate If Constant Exists */
 
-
 /*===== SIDEBAR HIDDEN =====*/
 /* Validate If Constant Exists */
-
 
 /*=============== Share Social ===============*/
 
@@ -39,20 +36,28 @@ window.addEventListener('beforeunload', () => {
     localStorage.setItem('scrollPosition', window.scrollY);
 });
 
-// Restaurar a posição de rolagem após a página carregar
+// Restaurar a posição de rolagem e seção ao recarregar a página
 window.addEventListener('load', () => {
     const scrollPosition = localStorage.getItem('scrollPosition');
     if (scrollPosition !== null) {
         window.scrollTo(0, parseInt(scrollPosition, 10));
-        localStorage.removeItem('scrollPosition'); // Remove a posição salva após restaurá-la
+        localStorage.removeItem('scrollPosition');
+    }
+
+    // Ajuste para redirecionar à seção correta ao carregar a página
+    const path = window.location.pathname.substring(1); // Remove a barra inicial "/"
+    if (path) {
+        const targetElement = document.getElementById(path);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        }
     }
 });
 
-
-
-
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
-
 
 /*===== Nav Active Link =====*/
 // Configuração para rolagem suave e atualização de URL com alias
@@ -104,9 +109,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-
 /*===== Work Popup =====*/
-
 
 /*=============== SERVICES MODAL ===============*/
 const modalViews = document.querySelectorAll('.services__modal'),
@@ -140,7 +143,6 @@ window.addEventListener('click', (event) => {
     });
 });
 
-
 /*=============== SWIPER TESTIMONIAL ===============*/
 document.addEventListener("DOMContentLoaded", function() {
     let swiper = new Swiper(".testimonials__container", {
@@ -157,15 +159,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
 /*=============== INPUT ANIMATION ===============*/
-
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
-
 /*=============== SHOW SCROLL UP ===============*/
 
-
 /*=============== body ===============*/
-
