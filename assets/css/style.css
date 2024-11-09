@@ -437,6 +437,7 @@ input{
     text-align: justify;
     padding-right: 40px;
     margin-bottom: var(--mb-2);
+    font-size: var(--small-font-size);
 }
 
 .about__info {
@@ -737,7 +738,7 @@ input{
 }
 
 .testimonial__date{
-    font-size: var(--normal-font-size);
+    font-size: var(--small-font-size);
     margin-bottom: var(--mb-2);
 }
 
@@ -754,7 +755,7 @@ input{
 }
 
 .testimonial__profile-name{
-    font-size: var(--h3-font-size);
+    font-size: 14px;
     font-weight: var(--font-medium);
     color: var(--title-color);
     margin-bottom: 0.5rem
@@ -793,7 +794,96 @@ input{
 
 
 /*=============== FOOTER ===============*/
+.footer{
+    padding-top: 3rem;
+}
 
+.footer__container{
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.6rem;
+    margin-top: var(--mb-1-5);
+}
+
+.footer__bg{
+    background-color: var(--box-color);
+    padding: 1rem 0 3.5rem;
+}
+
+.footer__title{
+    font-size: 19px;
+    margin-bottom: var(--mb-0-25);
+}
+
+.footer__title span{
+    color: var(--skin-color);
+}
+
+.footer__subtitle{ 
+    font-size: var(--small-font-size);
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column; 
+    align-items: last baseline; 
+    row-gap: 0.5rem; 
+    font-size: var(--small-font-size);
+}
+
+.footer__link:hover{
+    color: var(--skin-color);
+    
+}
+
+.footer__socials {
+    display: flex;
+    flex-direction: column; 
+    align-items: last baseline; 
+    row-gap: 0.5rem; 
+    font-size: var(--small-font-size);
+}
+
+.footer__social{
+    font-size: 1rem;
+    margin-right: var(--mb-1-5);
+    column-gap: 1rem;
+    font-size: var(--small-font-size);  
+}
+
+.footer__social:hover{
+    color: var(--skin-color);
+}
+
+.footer__copy{
+    font-size: var(--smaller-font-size);
+    text-align: center;
+    color: var(--text-color-light);
+    margin-top: var(--mb-3);
+}
+
+.footer__developed {
+    font-size: var(--smaller-font-size);
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--text-color);
+    
+}
+
+.footer__verse {
+    font-size: var(--small-font-size);
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--text-color);
+    font-style: italic; /* Faz o texto ficar em itálico */
+}
+
+
+.footer__title,
+.footer__subtitle,
+.footer__link,
+.footer__social{
+    color: var(--title-color);
+}
 
 /*=============== SCROLL UP ===============*/
 
