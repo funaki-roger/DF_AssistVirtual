@@ -21,10 +21,10 @@ function showCopyModal() {
     }, 3000);
 }
 
-// Evento para simular a ação de copiar link (pode ser adaptado ao seu caso real)
+// Evento para copiar o link específico ("/inicio") e exibir a notificação
 document.querySelector('.btn__share').addEventListener('click', () => {
-    // Simula a cópia do link
-    navigator.clipboard.writeText(window.location.href)
+    // Copia o link específico "/inicio"
+    navigator.clipboard.writeText(window.location.origin + '/inicio')
         .then(() => {
             showCopyModal(); // Exibe o modal de notificação
         })
