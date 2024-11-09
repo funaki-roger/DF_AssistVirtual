@@ -9,7 +9,30 @@
 /* Validate If Constant Exists */
 
 
-/*=============== SKILLS TABS ===============*/
+/*=============== Share Social ===============*/
+// Função para exibir o modal de notificação
+function showCopyModal() {
+    const copyModal = document.getElementById('copyModal');
+    copyModal.classList.add('show');
+
+    // Remove a notificação após 3 segundos
+    setTimeout(() => {
+        copyModal.classList.remove('show');
+    }, 3000);
+}
+
+// Evento para simular a ação de copiar link (pode ser adaptado ao seu caso real)
+document.querySelector('.btn__share').addEventListener('click', () => {
+    // Simula a cópia do link
+    navigator.clipboard.writeText(window.location.href)
+        .then(() => {
+            showCopyModal(); // Exibe o modal de notificação
+        })
+        .catch(err => {
+            console.error('Erro ao copiar o link: ', err);
+        });
+});
+
 
 
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
