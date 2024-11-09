@@ -10,6 +10,7 @@
 
 
 /*=============== Share Social ===============*/
+
 // Função para exibir o modal de notificação
 function showCopyModal() {
     const copyModal = document.getElementById('copyModal');
@@ -21,10 +22,10 @@ function showCopyModal() {
     }, 3000);
 }
 
-// Evento para copiar o link específico ("/inicio") e exibir a notificação
+// Evento para simular a ação de copiar link
 document.querySelector('.btn__share').addEventListener('click', () => {
-    // Copia o link específico "/inicio"
-    navigator.clipboard.writeText(window.location.origin + '/inicio')
+    // Simula a cópia do link
+    navigator.clipboard.writeText(window.location.href)
         .then(() => {
             showCopyModal(); // Exibe o modal de notificação
         })
@@ -32,6 +33,21 @@ document.querySelector('.btn__share').addEventListener('click', () => {
             console.error('Erro ao copiar o link: ', err);
         });
 });
+
+// Salvar a posição de rolagem antes de recarregar a página
+window.addEventListener('beforeunload', () => {
+    localStorage.setItem('scrollPosition', window.scrollY);
+});
+
+// Restaurar a posição de rolagem após a página carregar
+window.addEventListener('load', () => {
+    const scrollPosition = localStorage.getItem('scrollPosition');
+    if (scrollPosition !== null) {
+        window.scrollTo(0, parseInt(scrollPosition, 10));
+        localStorage.removeItem('scrollPosition'); // Remove a posição salva após restaurá-la
+    }
+});
+
 
 
 
