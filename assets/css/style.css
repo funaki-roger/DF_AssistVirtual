@@ -234,6 +234,31 @@ input{
     font-size: 1.5rem;
 }
 
+.nav__toggle{
+    height: 32px;
+    width: 36px;
+    cursor: pointer;
+    position: fixed;
+    right: 1.5rem;
+    top: 2rem;
+    font-size: 1.2rem;
+    border-radius: .25rem;
+    background-color: var(--box-color);
+    color: var(--skin-color);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__close{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
 /* Active Link */
 .nav__link.active-link, .nav__link:hover{
     color: var(--skin-color);
@@ -869,6 +894,16 @@ input{
     
 }
 
+.footer__developed a {
+    color: var(--text-color);
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.footer__developed a:hover {
+    text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
+}
+
+
 .footer__verse {
     font-size: var(--small-font-size);
     text-align: center;
@@ -911,11 +946,78 @@ input{
 
 /*========== BREAKPOINTS ==========*/
 /* For Large Devices */
-@media screen and (max-width: 1408px) {}
+@media screen and (max-width: 1408px) {
 
-@media screen and (max-width: 1216px) {}
+    .container {
+        margin-left: var(--mb-2-5);
+        margin-right: var(--mb-2s-5);
+    }
+}
 
-@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 1216px) {
+    .about__container{
+        column-gap: 2.5rem;
+    }
+
+    .about__description{
+        padding-right: 0;
+    }
+
+    .work__container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container{
+        margin-left: var(--mb-1-5);
+        margin-right: var(--mb-1-5);
+    }
+
+    .sidebar{
+        width: 100%;
+        z-index: 999;
+        transform: translateX(-100%);
+ }
+
+    .nav__logo,
+    .btn__share{
+        display: none;
+    }
+
+    .nav__menu{
+        height: 100%;
+        width: 100%;
+        transform: rotate(0deg) translateX(0);
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav__list{
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav__link{
+        padding: 1rem 0;
+        line-height: 1.5;
+    }
+
+    .nav__link.nav__link.active-link::after, .nav__link:hover::after{
+        bottom: 0;
+    }
+
+    .nav__close{
+        display: block;
+    }
+
+    .main{
+        margin-left: 0;
+    }
+}
 
 /* For Medium Devices */
 @media screen and (max-width: 768px) {}
