@@ -463,6 +463,7 @@ input{
     padding-right: 40px;
     margin-bottom: var(--mb-2);
     font-size: var(--small-font-size);
+    
 }
 
 .about__info {
@@ -584,6 +585,7 @@ input{
 .timeline__text{
     font-size: var(--smaller-font-size);
     margin-bottom: var(--mb-1);
+    padding-right: 40px;
 }
 
 .timeline__date, .timeline__certificate{
@@ -592,6 +594,7 @@ input{
     column-gap: .4rem;
     font-size: var(--small-font-size);
     color: var(--skin-color);
+    padding-right: 40px;
 }
 
 
@@ -607,6 +610,7 @@ input{
     background-color: var(--box-color);
     padding: 3rem 0 2rem 2.5rem;
     border-radius: .25rem;
+    padding-right: 35px;
 }
 
 .services__icon{
@@ -618,14 +622,17 @@ input{
 
 .services__content.bronze .services__icon {
     color: #dc9752fa; /* cor de bronze */
+   
 }
 
 .services__content.prata .services__icon {
     color: #a5a5a5; /* cor de prata */
+    
 }
 
 .services__content.ouro .services__icon {
     color: #c9b332; /* cor de ouro */
+    
 }
 
 
@@ -945,84 +952,143 @@ input{
 
 
 /*========== BREAKPOINTS ==========*/
-/* For Large Devices */
-@media screen and (max-width: 1408px) {
 
+/* Large Devices */
+@media screen and (max-width: 1408px) {
     .container {
         margin-left: var(--mb-2-5);
-        margin-right: var(--mb-2s-5);
+        margin-right: var(--mb-2-5);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
     }
 }
 
+/* Medium-Large Devices */
 @media screen and (max-width: 1216px) {
-    .about__container{
+    .about__container {
         column-gap: 2.5rem;
     }
 
-    .about__description{
+    .about__description {
         padding-right: 0;
     }
 
-    .work__container{
+    .work__container {
         grid-template-columns: repeat(2, 1fr);
         gap: 3rem;
     }
 }
 
+/* Tablets and Small Laptops */
 @media screen and (max-width: 1024px) {
-    .container{
+    .container {
         margin-left: var(--mb-1-5);
         margin-right: var(--mb-1-5);
     }
 
-    .sidebar{
+    .sidebar {
         width: 100%;
         z-index: 999;
         transform: translateX(-100%);
- }
+    }
 
     .nav__logo,
-    .btn__share{
+    .btn__share {
         display: none;
     }
 
-    .nav__menu{
-        height: 100%;
+    .nav__menu {
         width: 100%;
-        transform: rotate(0deg) translateX(0);
         display: flex;
         justify-content: center;
     }
 
-    .nav__list{
+    .nav__list {
         flex-direction: column;
         height: 100%;
         justify-content: center;
         align-items: center;
     }
 
-    .nav__link{
+    .nav__link {
         padding: 1rem 0;
         line-height: 1.5;
+        font-size: 1rem; /* Tamanho adaptado */
     }
 
-    .nav__link.nav__link.active-link::after, .nav__link:hover::after{
-        bottom: 0;
-    }
-
-    .nav__close{
+    .nav__close {
         display: block;
     }
 
-    .main{
+    .main {
         margin-left: 0;
+    }
+
+    .about__container {
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
+    }
+
+    .about__img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .about__data {
+        text-align: center;
+        font-size: 1rem; /* Tamanho adaptado */
     }
 }
 
-/* For Medium Devices */
-@media screen and (max-width: 768px) {}
+/* Tablets (Medium Devices) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
 
-@media screen and (max-width: 576px) {}
+    .work__container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 
-/* For Small Devices */
-@media screen and (max-width: 350px) {}
+    .nav__menu {
+        flex-direction: column;
+    }
+}
+
+/* Mobile Devices (Small Devices) */
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .nav__link {
+        font-size: 0.875rem; /* Tamanho adaptado para dispositivos menores */
+    }
+
+    .about__img {
+        width: 100%;
+    }
+}
+
+/* Extra Small Devices */
+@media screen and (max-width: 350px) {
+    .container {
+        padding: 0 0.25rem;
+    }
+
+    .nav__link {
+        font-size: 0.75rem; /* Tamanho reduzido */
+    }
+
+    .about__data {
+        padding: 0 1rem;
+        font-size: 0.875rem; /* Tamanho menor */
+    }
+}
