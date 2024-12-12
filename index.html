@@ -1,854 +1,959 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--========== UNICONS ==========-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 
-    <!--========== ICONS ==========-->
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-
-    <!--========== SWIPER CSS ==========-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!--========== BOXICONS ==========-->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet" />
+
+    <!--========== SWIPER CSS ==========-->
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
 
     <!--========== MAIN CSS ==========-->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
     <title>DF Assistência Virtual - Vamos crescer juntos?</title>
     <link rel="icon" type="image/png" href="assets/img/logo.png">
 </head>
 
-<body>
+  <body>
     <!--========== SIDEBAR ==========-->
+
     <div class="nav__toggle" id="nav-toggle">
-        <i class="bi bi-list"></i>
+      <i class="uil uil-bars"></i>
     </div>
     <aside class="sidebar" id="sidebar">
-        <nav class="nav">
-            <div class="nav__logo">
-                <a href="index.html" class="nav__logo-text">DF</a>
-            </div>
+      <nav class="nav">
+        <div class="nav__logo">
+          <a href="./index.html" class="nav__logo-text">DF</a>
+        </div>
+        <div class="nav__menu">
+          <div class="menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#home" class="nav__link active-link">Início</a>
+              </li>
+              <li class="nav__item">
+                <a href="#about" class="nav__link">Sobre</a>
+              </li>
+              <li class="nav__item">
+                <a href="#work" class="nav__link">Experiência</a>
+              </li>
+              <li class="nav__item">
+                <a href="#services" class="nav__link">Pacotes</a>
+              </li>
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">Contato</a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-            <div class="nav__menu">
-                <div class="menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#inicio" class="nav__link active-link">Início</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#sobre" class="nav__link">Sobre</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#experiencia" class="nav__link">Experiência</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#pacotes" class="nav__link">Pacotes</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#depoimentos" class="nav__link">Depoimentos</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
 
             <!--========== share button ========== -->
             <div class="btn__share">
-                <i class="bi bi-share-fill social__share"></i>
-            </div>
+              <i class="bi bi-share-fill social__share"></i>
+          </div>
 
-            <div id="shareModal" class="modal">
-                <div id="copyModal" class="copy-modal">
-                    Link copiado!
-                </div>
-            </div>
+          <div id="shareModal" class="modal">
+              <div id="copyModal" class="copy-modal">
+                  Você copiou o link desta pagina!
+              </div>
+          </div>
 
-            <div class="nav__close" id="nav-close">
-                <i class="bi bi-x-lg"></i>
-            </div>
+          <div class="nav__close" id="nav-close">
+              <i class="bi bi-x-lg"></i>
+          </div>
 
-        </nav>
+
+      </nav>
     </aside>
 
     <!--========== MAIN ==========-->
     <main class="main">
-        <!--===== Home =====-->
-        <section class="home" id="inicio">
-            <div class="home__container container grid">
-                <div class="home__social">
-                    <span class="home__social-follow">Fique por dentro das minhas atualizações</span>
-                    <div class="home__social-links">
-                        <a href="https://www.instagram.com/df.assistenciavirtual/" target="_blank"
-                            class="home__social-link">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/dayanefunaki/" target="_blank" class="home__social-link">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
+      <!--===== Home =====-->
+      <section class="home" id="home">
+        <div class="home__container container grid">
+          <div class="home__social">
+            <span class="home__social-follow">Follow Me</span>
+            <div class="home__social-links">
 
-                <img src="assets/img/home-img.png" alt="" class="home__img">
-
-                <div class="home__data">
-                    <h1 class="home__title">Bem-vindo à <span>DF Assistência Virtual.</span></h1>
-                    <h3 class="home__subtitle">Organização, eficiência e foco no que importa!</h3>
-                    <p class="home__description">Aqui, entendemos o valor de cada minuto do seu dia, e nossa missão é
-                        oferecer uma assistência virtual
-                        que vai além do suporte: uma parceria estratégica para ajudar você a alcançar mais! </p>
-                    <a href="#sobre" class="button"><i class="bi bi-person-check"></i>Saiba mais!</a>
-                </div>
-
-                <div class="my__info">
-                    <div class="info__item">
-                        <i class="bi bi-whatsapp info__icon"></i>
-
-                        <div>
-                            <h3 class="info__title">WhatsApp:</h3>
-                            <span class="info__subtitle"> +55 (11) 94241 - 3623</span>
-                        </div>
-                    </div>
-
-                    <div class="info__item">
-                        <i class="bi bi-envelope-at info__icon"></i>
-
-                        <div>
-                            <h3 class="info__title">E-mail:</h3>
-                            <span class="info__subtitle">df.assistenciavirtual@gmail.com</span>
-                        </div>
-                    </div>
-                </div>
+              <a href="https://www.instagram.com/df.assistenciavirtual/" target="_blank"
+              class="home__social-link">
+              <i class="bi bi-instagram"></i>
+              </a>
+              
+              <a href="https://www.linkedin.com/in/dayanefunaki/" target="_blank" class="home__social-link">
+                <i class="bi bi-linkedin"></i>
+            </a>
             </div>
-        </section>
-        <!--===== About =====-->
-        <section class="about section" id="sobre">
-            <h2 data-heading="De profissional para profissional" class="section__title">Entenda melhor!</h2>
+          </div>
 
-            <div class="about__container container grid">
-                <img src="assets/img/about-img.png" alt="" class="about__img">
+          <img src="./assets/img/home-img.png" alt="" class="home__img" />
 
-                <div class="about__data">
-                    <h3 class="about__heading">Sou <span>Dayane Funaki</span> Assistente Virtual Financeira e
-                        Administrativa.</h3><br>
-                    <p class="about__description">Com mais de 6 anos de experiência, ajudo a transformar processos em
-                        soluções que simplificam sua rotina. O objetivo? Permitir que você se concentre no essencial,
-                        com mais tempo e clareza para o seu negócio. Cada detalhe é cuidadosamente gerido para trazer
-                        leveza e eficiência.
-                        <br><br>
-                        O que me diferencia? Organização financeira impecável, precisão administrativa e um
-                        acompanhamento próximo — para que cada oportunidade seja aproveitada ao máximo.
-                        <br><br>
-                        Seu tempo é valioso, e o meu compromisso é otimizá-lo. Ofereço assistência virtual que liberta
-                        você das tarefas essenciais e aumenta sua produtividade, com soluções de finanças e suporte sob
-                        medida para uma gestão fluida e impactante.
-                        <br><br>
-                        Pronto(a) para explorar o poder de uma rotina transformada e resultados concretos? Envie uma
-                        mensagem, e vamos conversar. Transforme o tempo no seu maior aliado.
+          <div class="home__data">
+            <h1 class="home__title">Bem-vindo à <span>DF Assistência Virtual.</span></h1>
+            <h3 class="home__subtitle">Organização, eficiência e foco no que importa!</h3>
+            <p class="home__description">Valorizo cada minuto do seu dia e ofereço uma assistência que vai além do suporte: uma parceria para você alcançar mais! </p>
+            <a href="#about" class="button">
+              <i class="uil uil-user button__icon"></i>
+              Confira!
+            </a>
+          </div>
+
+          <div class="my__info">
+
+            <div class="info__item">
+              <i class="bi bi-whatsapp info__icon"></i>
+              <div>
+                <h3 class="info__title">WhatsApp:</h3>
+                <span class="info__subtitle"> +55 (11) 94241 - 3623</span>
+              </div>
+            </div>
+            <div class="info__item">
+              <i class="bi bi-envelope-at info__icon"></i>
+              <div>
+                <h3 class="info__title">E-mail:</h3>
+                <span class="info__subtitle">df.assistenciavirtual@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--===== About =====-->
+      <section class="about section" id="about">
+        <h2 data-heading="De profissional para profissional" class="section__title">Entenda melhor!</h2>
+      
+        <div class="about__container container grid">
+          <img src="./assets/img/about-img.png" alt="Photo of Mariam Wallas" class="about__img" />
+      
+          <div class="about__data">
+            <h3 class="about__heading">Sou <span>Dayane Funaki</span> Assistente Virtual Financeira e
+              Administrativa.</h3><br>
+            <p class="about__description">
+              Com mais de 6 anos de experiência, ajudo a transformar processos em
+              soluções que simplificam sua rotina. O objetivo? Permitir que você se concentre no essencial,
+              com mais tempo e clareza para o seu negócio. Cada detalhe é cuidadosamente gerido para trazer
+              leveza e eficiência.
+              <br><br>
+              O que me diferencia? Organização financeira impecável, precisão administrativa e um
+              acompanhamento próximo — para que cada oportunidade seja aproveitada ao máximo.
+              <br><br>
+              Seu tempo é valioso, e o meu compromisso é otimizá-lo. Ofereço assistência virtual que liberta
+              você das tarefas essenciais e aumenta sua produtividade, com soluções de finanças e suporte sob
+              medida para uma gestão fluida e impactante.
+              <br><br>
+              Pronto(a) para explorar o poder de uma rotina transformada e resultados concretos? Envie uma
+              mensagem, e vamos conversar. Transforme o tempo no seu maior aliado.
+            </p>
+      
+            <div class="about__info grid">
+
+              <div class="about__box">
+                <i class="bi bi-award about__icon"></i>
+                <h3 class="about__title">Formada em Gestão Financeira</h3>
+                <span class="about__subtitle">Universidade Anhembi Morumbi - SP</span>
+              </div>
+      
+              <div class="about__box">
+                <i class="bi bi-award about__icon"></i>
+                <h3 class="about__title">Formada em Técnico Administrativo</h3>
+                <span class="about__subtitle">FIEB - Fundação Instituto de Educação de Barueri</span>
+              </div>
+      
+              <div class="about__box">
+                <i class="bi bi-person-video3 about__icon"></i>
+                <h3 class="about__title">Online de Segunda a Sexta-feira</h3>
+                <span class="about__subtitle">Horário das 08h30 às 19h</span>
+              </div>
+            </div>
+      
+            <a href="#contact" class="button">
+              <i class="uil uil-navigator button__icon"></i>
+              Vamos crescer juntos?
+            </a>
+          </div>
+        </div>
+      </section>
+      
+
+      <!--===== Qualification =====-->
+      <section class="qualification section" id="work">
+        <h2 data-heading="Minha trajetória no mundo corporativo" class="section__title">Qualificações!</h2>
+
+        <div class="qualification__container container grid">
+          <div class="education">
+            <h3 class="qualification__title">
+              <i class="uil uil-graduation-cap"></i>
+              Licenças e certificados
+            </h3>
+
+            <div class="timeline">
+              <div class="timeline__item">
+                  <div class="circle__dot"></div>
+                  <h3 class="timeline__title">Microsoft</h3>
+                  <p class="timeline__text">EXCEL: INTERMEDIÁRIO > carga horária estimada em 8 horas.</p>
+                  <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
+                      Verificação emitida em nov de 2020
+                  </span><br>
+              </div>
+
+              <div class="timeline__item">
+                  <div class="circle__dot"></div>
+                  <h3 class="timeline__title">KA Solution</h3>
+                  <p class="timeline__text">Visão Geral do Power BI > Carga Horária: 8 horas</p>
+                  <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
+                      Verificação emitida em Julho de 2021
+                  </span><br>
+              </div>
+
+              <div class="timeline__item">
+                  <div class="circle__dot"></div>
+                  <h3 class="timeline__title">KA Solution</h3>
+                  <p class="timeline__text">Fundamentos Básicos do SAP > Carga Horária: 8 horas</p>
+                  <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
+                      Verificação emitida em Novembro de 2021
+                  </span><br>
+              </div>
+
+              <div class="timeline__item">
+                  <div class="circle__dot"></div>
+                  <h3 class="timeline__title">Escola Conquer | Flavio Augusto</h3>
+                  <p class="timeline__text">Produtividade e Gestão do Tempo > carga horária estimada em 10
+                      horas.</p>
+                  <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
+                      Finalizado em 01 de Fevereiro de 2022
+                  </span> <br>
+                  <div style="display: flex; align-items: center;">
+                      <a href="https://conquerplus.com.br/certificates/7f34a469-bf42-4c14-82b9-afd853ca2e83"
+                          target="_blank"
+                          style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
+                          <span class="timeline__certificate">Exibir credencial</span>
+                          <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+                      </a>
+                  </div>
+              </div>
+
+              <div class="timeline__item">
+                  <div class="circle__dot"></div>
+                  <h3 class="timeline__title">ALURA</h3>
+                  <p class="timeline__text">Gerente Ágil > 10 cursos da formação com carga horária estimada em
+                      72 horas.</p>
+                  <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
+                      Finalizado em 23 de maio de 2023
+                  </span> <br>
+                  <div style="display: flex; align-items: center;">
+                      <a href="https://cursos.alura.com.br/degree/certificate/efd12ffb-314e-4ad1-afb0-f6638d75d4e8"
+                          target="_blank"
+                          style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
+                          <span class="timeline__certificate">Exibir credencial</span>
+                          <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+                      </a>
+                  </div>
+              </div>
+
+              <div class="timeline__item">
+                  <div class="circle__dot"></div>
+                  <h3 class="timeline__title">ALURA</h3>
+                  <p class="timeline__text">Formação em Comunicação > 7 cursos com carga horária estimada em
+                      49 horas.</p>
+                  <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
+                      Finalizado em 21 de junho de 2023
+                  </span> <br>
+                  <div style="display: flex; align-items: center;">
+                      <a href="https://cursos.alura.com.br/degree/certificate/24fdf3e7-1fcd-44bc-9f99-3d92d4acd3bd"
+                          target="_blank"
+                          style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
+                          <span class="timeline__certificate">Exibir credencial</span>
+                          <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+                      </a>
+                  </div>
+              </div>
+
+              <div class="timeline__item">
+                  <div class="circle__dot"></div>
+                  <h3 class="timeline__title">ALURA</h3>
+                  <p class="timeline__text">LGPD > carga horária estimada em 10 horas.</p>
+                  <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
+                      Finalizado em 21 de junho de 2023
+                  </span> <br>
+                  <div style="display: flex; align-items: center;">
+                      <a href="https://cursos.alura.com.br/certificate/f82c8287-318f-41f9-88a9-48c883d06813"
+                          target="_blank"
+                          style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
+                          <span class="timeline__certificate">Exibir credencial</span>
+                          <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+                      </a>
+                  </div>
+              </div>
+
+              <div class="timeline__item">
+                  <div class="circle__dot"></div>
+                  <h3 class="timeline__title">Escola Conquer | Flavio Augusto</h3>
+                  <p class="timeline__text">Negociação & Influência > carga horária estimada em 15 horas.</p>
+                  <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
+                      Finalizado em 03 de agosto de 2023
+                  </span> <br>
+                  <div style="display: flex; align-items: center;">
+                      <a href="https://www.conquerplus.com.br/certificates/eb6f5631-a683-435f-a874-b778a7f52d1d?enrollment=2684662"
+                          target="_blank"
+                          style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
+                          <span class="timeline__certificate">Exibir credencial</span>
+                          <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+                      </a>
+                  </div>
+              </div>
+
+              <div class="timeline__item">
+                  <div class="circle__dot"></div>
+                  <h3 class="timeline__title">ALURA</h3>
+                  <p class="timeline__text">Organização de Equipes Ágeis > carga horária estimada em 6 horas.
+                  </p>
+                  <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
+                      Finalizado em 18 de agosto de 2023
+                  </span> <br>
+                  <div style="display: flex; align-items: center;">
+                      <a href="https://cursos.alura.com.br/user/day-goncalvesferreira/course/organizando-equipes-ageis/certificate"
+                          target="_blank"
+                          style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
+                          <span class="timeline__certificate">Exibir credencial</span>
+                          <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+                      </a>
+                  </div>
+              </div>
+
+              <div class="timeline__item">
+                  <div class="circle__dot"></div>
+                  <h3 class="timeline__title">ALURA</h3>
+                  <p class="timeline__text">Gestão Ágil > carga horária estimada em 6 horas.</p>
+                  <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
+                      Finalizado em 18 de agosto de 2023
+                  </span> <br>
+                  <div style="display: flex; align-items: center;">
+                      <a href="https://cursos.alura.com.br/user/day-goncalvesferreira/course/gestao-agil/certificate"
+                          target="_blank"
+                          style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
+                          <span class="timeline__certificate">Exibir credencial</span>
+                          <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+                      </a>
+                  </div>
+              </div>
+
+              <div class="timeline__item">
+                  <div class="circle__dot"></div>
+                  <h3 class="timeline__title">ALURA</h3>
+                  <p class="timeline__text">Desenvolvimento de Carreira > carga horária estimada em 10 horas.
+                  </p>
+                  <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
+                      Finalizado em 17 de janeiro de 2024
+                  </span> <br>
+                  <div style="display: flex; align-items: center;">
+                      <a href="https://cursos.alura.com.br/user/day-goncalvesferreira/course/desenvolvimento-de-carreira-a-demanda-do-mercado/certificate"
+                          target="_blank"
+                          style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
+                          <span class="timeline__certificate">Exibir credencial</span>
+                          <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+                      </a>
+                  </div>
+              </div>
+
+              <div class="timeline__item">
+                  <div class="circle__dot"></div>
+                  <h3 class="timeline__title">ALURA</h3>
+                  <p class="timeline__text">Personal Branding > carga horária estimada em 8 horas.</p>
+                  <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
+                      Finalizado em 17 de janeiro de 2024
+                  </span> <br>
+                  <div style="display: flex; align-items: center;">
+                      <a href="https://cursos.alura.com.br/user/day-goncalvesferreira/course/personal-branding-utilizar-marca-pessoal-favor-carreira/certificate"
+                          target="_blank"
+                          style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
+                          <span class="timeline__certificate">Exibir credencial</span>
+                          <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+                      </a>
+                  </div>
+              </div>
+
+              <div class="timeline__item">
+                  <div class="circle__dot"></div>
+                  <h3 class="timeline__title">ALURA</h3>
+                  <p class="timeline__text">Product Manager > carga horária estimada em 8 horas.</p>
+                  <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
+                      Finalizado em 21 de janeiro de 2024
+                  </span> <br>
+                  <div style="display: flex; align-items: center;">
+                      <a href="https://cursos.alura.com.br/user/day-goncalvesferreira/course/product-manager-jornada-gestao-produto/certificate"
+                          target="_blank"
+                          style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
+                          <span class="timeline__certificate">Exibir credencial</span>
+                          <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+                      </a>
+                  </div>
+              </div>
+
+              <div class="timeline__item">
+                  <div class="circle__dot"></div>
+                  <h3 class="timeline__title">ALURA</h3>
+                  <p class="timeline__text">Gestão Financeira > carga horária estimada em 6 horas.</p>
+                  <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
+                      Finalizado em 24 de janeiro de 2024
+                  </span> <br>
+                  <div style="display: flex; align-items: center;">
+                      <a href="https://cursos.alura.com.br/user/day-goncalvesferreira/course/gestao-financeira-administre-financas-pratica/certificate"
+                          target="_blank"
+                          style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
+                          <span class="timeline__certificate">Exibir credencial</span>
+                          <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+                      </a>
+                  </div>
+
+              </div>
+
+          </div>
+
+          </div>
+
+          <div class="experience">
+            <h3 class="qualification__title">
+              <i class="uil uil-suitcase"></i>
+              Experiências
+            </h3>
+
+            <div class="timeline">
+
+              <div class="timeline__item">
+                <div class="circle__dot"></div>
+                <h3 class="timeline__title">Prime Arte | Analista Financeiro</h3>
+                <p class="timeline__text">Na minha atual posição, desempenho uma série de funções cruciais
+                  para o funcionamento eficiente da empresa. Isso inclui desde o cadastro detalhado de
+                  fornecedores até o meticuloso acompanhamento e baixa de contas a pagar. Sou responsável
+                  também pelo lançamento e gestão de notas fiscais, assegurando que todas as transações
+                  sejam devidamente registradas e documentadas.
+                  <br><br>
+                  Além disso, desempenho um papel fundamental na gestão de compras e orçamentos,
+                  trabalhando para garantir que as necessidades da empresa sejam atendidas dentro das
+                  diretrizes financeiras estabelecidas. Colaboro diretamente com a contabilidade,
+                  fornecendo informações precisas e essenciais para o processo de tomada de decisão.
+                  <br><br>
+                  Internamente, ofereço suporte à equipe, auxiliando em diversas demandas operacionais e
+                  administrativas. Emito notas de faturamento com precisão e cuido do controle e envio de
+                  equipamentos utilizados pela equipe. Além disso, sou responsável pelo cadastro e
+                  atualização de clientes, garantindo um relacionamento fluido e organizado.
+                  <br><br>
+                  Para assegurar a integridade financeira da empresa, realizo conciliação bancária
+                  regularmente e mantenho um controle rigoroso sobre notas de fornecedores, assegurando
+                  que todas as obrigações sejam cumpridas de maneira oportuna. Por fim, sou encarregado da
+                  emissão de boletos, contribuindo para o fluxo de caixa da empresa de maneira eficiente e
+                  confiável.
+                  <br><br>
+                  Essas responsabilidades abrangentes refletem não apenas minha habilidade de gerenciar
+                  múltiplas tarefas com precisão, mas também meu compromisso em garantir a eficiência e
+                  conformidade dentro do ambiente corporativo.</p>
+                <span class="timeline__date">
+                  <i class="uil uil-calendar-alt"></i>
+                  Novembro de 2020 - Até o momento · 4 anos 1 mês
+                </span>
+              </div>
+
+              <div class="timeline__item">
+                <div class="circle__dot"></div>
+                <h3 class="timeline__title">HappyBiz  | Auxiliar financeiro</h3>
+                <p class="timeline__text">Na HappyBiz Tecnologia e Sistemas, tive o privilégio de
+                  desempenhar uma variedade de funções essenciais para o funcionamento eficiente da
+                  empresa. Isso inclui o controle meticuloso e o lançamento de contas a receber e a pagar,
+                  garantindo que todos os registros financeiros estejam atualizados e precisos. Realizei
+                  também conciliação bancária, gerenciando arquivos de remessa e retorno para manter a
+                  integridade das transações financeiras.
+                  <br><br>
+                  Além disso, fui responsável pela gestão de compras e estoque, assegurando que os
+                  suprimentos necessários estivessem disponíveis conforme demanda. Também participei
+                  ativamente da gestão de departamento pessoal, auxiliando em questões relacionadas a
+                  recursos humanos e folha de pagamento.
+                  <br><br>
+                  Contribuí significativamente para a organização de processos financeiros, implementando
+                  práticas que melhoraram a eficiência operacional e a conformidade regulatória. Emiti
+                  boletos e notas fiscais com precisão e pontualidade, facilitando o fluxo de caixa e o
+                  cumprimento das obrigações fiscais da empresa.
+                  <br><br>
+                  Por fim, desempenhei um papel crucial na organização e arquivamento de documentos
+                  importantes, garantindo fácil acesso e conformidade com normas legais. Essas
+                  responsabilidades demonstram minha capacidade de gerenciar múltiplas tarefas de maneira
+                  eficiente e contribuir para o sucesso operacional da HappyBiz Tecnologia e Sistemas.</p>
+                <span class="timeline__date">
+                  <i class="uil uil-calendar-alt"></i>
+                  Janeiro de 2018 - Fevereiro de 2020 · 2 anos 2 meses
+                </span>
+              </div>
+            
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Portfolio Popup -->
+      <div class="portfolio__popup">
+        <div class="portfolio__popup-inner">
+          <div class="portfolio__popup-content grid">
+            <span class="portfolio__popup-close">
+              <i class="uil uil-times"></i>
+            </span>
+            <div class="pp__thumbnail">
+              <img src="" alt="" class="portfolio__popup-img" />
+            </div>
+            <div class="portfolio__popup-info">
+              <div class="portfolio__popup-subtitle">
+                Featured - <span></span>
+              </div>
+              <div class="portfolio__popup-body"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--===== Services =====-->
+      <section class="services section" id="services">
+        <h2 data-heading="Soluções sob medida para o seu sucesso!" class="section__title">Conheça as opções!</h2>
+
+        <div class="services__container container grid">
+          <div class="services__content">
+            <div>
+              <i class="bi bi-box-seam services__icon-bronze"></i>
+              <h3 class="services__title">Pacote bronze></h3>
+            </div>
+            <span class="services__button">
+              Visualizar pacote <i class="bi bi-arrow-right services__button-icon"></i>
+            </span>
+            <div class="services__modal">
+              <div class="services__modal-content">
+                <i class="uil uil-times services__modal-close"></i>
+
+                <h3 class="services__modal-title">Pacote bronze</h3>
+                <p class="services__modal-description">
+                  Ideal para pequenas empresas que precisam de suporte básico em finanças e administração,
+                  proporcionando mais organização nas tarefas essenciais sem sobrecarregar o orçamento.
+              </p>
+
+              <ul class="services__modal-services grid">
+                <li class="services__modal-service">
+                    <i class="bi bi-check2-circle services__modal-icon"></i>
+                    <p class="services__modal-info">Controle de Contas a Pagar: <br>
+                        - Lançamento e arquivamento de notas de fornecedores; <br>
+                        - Baixas de pagamentos. <br>
                     </p>
-                    <div class="about__info grid">
-                        <div class="about__box">
-                            <i class="bi bi-award about__icon"></i>
-                            <h3 class="about__title">Formada em Gestão Financeira</h3>
-                            <span class="about__subtitle">Universidade Anhembi Morumbi - SP</span>
-                        </div>
-                        <div class="about__box">
-                            <i class="bi bi-award about__icon"></i>
-                            <h3 class="about__title">Formada em Técnico Administrativo</h3>
-                            <span class="about__subtitle">FIEB - Fundação Instituto de Educação de Barueri</span>
-                        </div>
-                        <div class="about__box">
-                            <i class="bi bi-person-video3 about__icon"></i>
-                            <h3 class="about__title">Online de Segunda a Sexta-feira</h3>
-                            <span class="about__subtitle">Horário das 08h30 às 19h</span>
-                        </div>
+                </li>
+                <li class="services__modal-service">
+                    <i class="bi bi-check2-circle services__modal-icon"></i>
+                    <p class="services__modal-info">Controle de Contas a Receber: <br>
+                        - Emissão de notas e boletos; <br>
+                        - Lançamento de recebimentos. <br>
+                    </p>
+                </li>
+                <li class="services__modal-service">
+                    <i class="bi bi-check2-circle services__modal-icon"></i>
+                    <p class="services__modal-info">Suporte Essencial: <br>
+                        - Respostas a perguntas frequentes sobre processos financeiros; <br>
+                        - Atualizações mensais sobre status de contas. <br><br>
+                    </p>
+                </li>
+                <li class="services__modal-service">
+                    <div>
+                        <p class="services__modal-info">
+                            <i class="bi bi-hourglass-top"></i> <strong>Carga Horária</strong>: 20
+                            horas/mês. <br><br>
+                            <i class="bi bi-wallet2"></i> <strong>Custo Mensal</strong>: R$ 1.000,00.
+                            <br><br>
+                            <i class="bi bi-bullseye"></i> <strong>Diferencial</strong>: Com o Pacote
+                            Bronze, o cliente recebe um suporte essencial e acessível para aliviar
+                            tarefas
+                            financeiras e manter controle sobre as contas, ideal para quem precisa de um
+                            ponto de partida sem compromissos maiores.
+                        </p>
                     </div>
-                    <a href="https://api.whatsapp.com/send?phone=5511942413623&text=&type=phone_number&app_absent=0"
-                        target="_blank" class="button"><i class="bi bi-wechat"></i>
-                        Vamos crescer juntos?
-                    </a>
-                </div>
+                </li>
+            </ul>
+
+              </div>
             </div>
-        </section>
-        <!--===== Qualification =====-->
-        <section class="qualification section" id="experiencia">
-            <h2 data-heading="Minha trajetória no mundo corporativo" class="section__title">Qualificações!</h2>
-            <div class="qualification__container container grid">
+          </div>
 
-                <div class="education">
-                    <h3 class="qualification__title">
-                        <i class="bi bi-mortarboard"></i> Licenças e certificados
-                    </h3>
+          <div class="services__content">
+            <div>
+              <i class="bi bi-box-seam services__icon-prata"></i>
+              <h3 class="services__title">Pacote prata></h3>
+            </div>
+            <span class="services__button">
+              Visualizar pacote <i class="bi bi-arrow-right services__button-icon"></i>
+            </span>
+            <div class="services__modal">
+              <div class="services__modal-content">
+                <i class="uil uil-times services__modal-close"></i>
 
-                    <div class="timeline">
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <h3 class="timeline__title">Microsoft</h3>
-                            <p class="timeline__text">EXCEL: INTERMEDIÁRIO > carga horária estimada em 8 horas.</p>
-                            <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
-                                Verificação emitida em nov de 2020
-                            </span><br>
-                        </div>
+                <h3 class="services__modal-title">Pacote prata</h3>
+                <p class="services__modal-description">
+                  Para empresas em crescimento que precisam de um suporte mais robusto em finanças e
+                  administração, ajudando a manter a organização financeira enquanto se expandem.
+              </p>
 
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <h3 class="timeline__title">KA Solution</h3>
-                            <p class="timeline__text">Visão Geral do Power BI > Carga Horária: 8 horas</p>
-                            <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
-                                Verificação emitida em Julho de 2021
-                            </span><br>
-                        </div>
-
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <h3 class="timeline__title">KA Solution</h3>
-                            <p class="timeline__text">Fundamentos Básicos do SAP > Carga Horária: 8 horas</p>
-                            <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
-                                Verificação emitida em Novembro de 2021
-                            </span><br>
-                        </div>
-
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <h3 class="timeline__title">Escola Conquer | Flavio Augusto</h3>
-                            <p class="timeline__text">Produtividade e Gestão do Tempo > carga horária estimada em 10
-                                horas.</p>
-                            <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
-                                Finalizado em 01 de Fevereiro de 2022
-                            </span>
-                            <div style="display: flex; align-items: center;">
-                                <a href="https://conquerplus.com.br/certificates/7f34a469-bf42-4c14-82b9-afd853ca2e83"
-                                    target="_blank"
-                                    style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
-                                    <span class="timeline__certificate">Exibir credencial</span>
-                                    <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <h3 class="timeline__title">ALURA</h3>
-                            <p class="timeline__text">Gerente Ágil > 10 cursos da formação com carga horária estimada em
-                                72 horas.</p>
-                            <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
-                                Finalizado em 23 de maio de 2023
-                            </span>
-                            <div style="display: flex; align-items: center;">
-                                <a href="https://cursos.alura.com.br/degree/certificate/efd12ffb-314e-4ad1-afb0-f6638d75d4e8"
-                                    target="_blank"
-                                    style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
-                                    <span class="timeline__certificate">Exibir credencial</span>
-                                    <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <h3 class="timeline__title">ALURA</h3>
-                            <p class="timeline__text">Formação em Comunicação > 7 cursos com carga horária estimada em
-                                49 horas.</p>
-                            <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
-                                Finalizado em 21 de junho de 2023
-                            </span>
-                            <div style="display: flex; align-items: center;">
-                                <a href="https://cursos.alura.com.br/degree/certificate/24fdf3e7-1fcd-44bc-9f99-3d92d4acd3bd"
-                                    target="_blank"
-                                    style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
-                                    <span class="timeline__certificate">Exibir credencial</span>
-                                    <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <h3 class="timeline__title">ALURA</h3>
-                            <p class="timeline__text">LGPD > carga horária estimada em 10 horas.</p>
-                            <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
-                                Finalizado em 21 de junho de 2023
-                            </span>
-                            <div style="display: flex; align-items: center;">
-                                <a href="https://cursos.alura.com.br/certificate/f82c8287-318f-41f9-88a9-48c883d06813"
-                                    target="_blank"
-                                    style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
-                                    <span class="timeline__certificate">Exibir credencial</span>
-                                    <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <h3 class="timeline__title">Escola Conquer | Flavio Augusto</h3>
-                            <p class="timeline__text">Negociação & Influência > carga horária estimada em 15 horas.</p>
-                            <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
-                                Finalizado em 03 de agosto de 2023
-                            </span>
-                            <div style="display: flex; align-items: center;">
-                                <a href="https://www.conquerplus.com.br/certificates/eb6f5631-a683-435f-a874-b778a7f52d1d?enrollment=2684662"
-                                    target="_blank"
-                                    style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
-                                    <span class="timeline__certificate">Exibir credencial</span>
-                                    <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <h3 class="timeline__title">ALURA</h3>
-                            <p class="timeline__text">Organização de Equipes Ágeis > carga horária estimada em 6 horas.
-                            </p>
-                            <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
-                                Finalizado em 18 de agosto de 2023
-                            </span>
-                            <div style="display: flex; align-items: center;">
-                                <a href="https://cursos.alura.com.br/user/day-goncalvesferreira/course/organizando-equipes-ageis/certificate"
-                                    target="_blank"
-                                    style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
-                                    <span class="timeline__certificate">Exibir credencial</span>
-                                    <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <h3 class="timeline__title">ALURA</h3>
-                            <p class="timeline__text">Gestão Ágil > carga horária estimada em 6 horas.</p>
-                            <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
-                                Finalizado em 18 de agosto de 2023
-                            </span>
-                            <div style="display: flex; align-items: center;">
-                                <a href="https://cursos.alura.com.br/user/day-goncalvesferreira/course/gestao-agil/certificate"
-                                    target="_blank"
-                                    style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
-                                    <span class="timeline__certificate">Exibir credencial</span>
-                                    <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <h3 class="timeline__title">ALURA</h3>
-                            <p class="timeline__text">Desenvolvimento de Carreira > carga horária estimada em 10 horas.
-                            </p>
-                            <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
-                                Finalizado em 17 de janeiro de 2024
-                            </span>
-                            <div style="display: flex; align-items: center;">
-                                <a href="https://cursos.alura.com.br/user/day-goncalvesferreira/course/desenvolvimento-de-carreira-a-demanda-do-mercado/certificate"
-                                    target="_blank"
-                                    style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
-                                    <span class="timeline__certificate">Exibir credencial</span>
-                                    <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <h3 class="timeline__title">ALURA</h3>
-                            <p class="timeline__text">Personal Branding > carga horária estimada em 8 horas.</p>
-                            <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
-                                Finalizado em 17 de janeiro de 2024
-                            </span>
-                            <div style="display: flex; align-items: center;">
-                                <a href="https://cursos.alura.com.br/user/day-goncalvesferreira/course/personal-branding-utilizar-marca-pessoal-favor-carreira/certificate"
-                                    target="_blank"
-                                    style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
-                                    <span class="timeline__certificate">Exibir credencial</span>
-                                    <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <h3 class="timeline__title">ALURA</h3>
-                            <p class="timeline__text">Product Manager > carga horária estimada em 8 horas.</p>
-                            <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
-                                Finalizado em 21 de janeiro de 2024
-                            </span>
-                            <div style="display: flex; align-items: center;">
-                                <a href="https://cursos.alura.com.br/user/day-goncalvesferreira/course/product-manager-jornada-gestao-produto/certificate"
-                                    target="_blank"
-                                    style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
-                                    <span class="timeline__certificate">Exibir credencial</span>
-                                    <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <h3 class="timeline__title">ALURA</h3>
-                            <p class="timeline__text">Gestão Financeira > carga horária estimada em 6 horas.</p>
-                            <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
-                                Finalizado em 24 de janeiro de 2024
-                            </span>
-                            <div style="display: flex; align-items: center;">
-                                <a href="https://cursos.alura.com.br/user/day-goncalvesferreira/course/gestao-financeira-administre-financas-pratica/certificate"
-                                    target="_blank"
-                                    style="display: flex; align-items: center; text-decoration: none; color: inherit; cursor: pointer;">
-                                    <span class="timeline__certificate">Exibir credencial</span>
-                                    <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
-                                </a>
-                            </div>
-
-                        </div>
-
+              <ul class="services__modal-services grid">
+                <li class="services__modal-service">
+                    <i class="bi bi-check2-circle services__modal-icon"></i>
+                    <p class="services__modal-info">Controle de Contas a Pagar: <br>
+                      - Lançamento e provisionamento em sistema financeiro; <br>
+                      - Solicitação e arquivamento de notas de fornecedores. <br>
+                  </p>
+                </li>
+                <li class="services__modal-service">
+                    <i class="bi bi-check2-circle services__modal-icon"></i>
+                    <p class="services__modal-info">Controle de Contas a Receber: <br>
+                      - Emissão de notas e boletos; <br>
+                      - Lançamento de recebimentos; <br>
+                      - Cobrança de inadimplência; <br>
+                      - Relatórios conforme a necessidade. <br>
+                  </p>
+                </li>
+                <li class="services__modal-service">
+                    <i class="bi bi-check2-circle services__modal-icon"></i>
+                    <p class="services__modal-info">Serviços Administrativos: <br>
+                      - Gestão de agenda; <br>
+                      - Gestão de contratos. <br>
+                  </p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="bi bi-check2-circle services__modal-icon"></i>
+                  <p class="services__modal-info">Suporte Essencial: <br>
+                      - Respostas a perguntas frequentes sobre processos financeiros; <br>
+                      - Atualizações quinzenais sobre status de contas; <br>
+                      - Agendamento de reuniões para revisão de resultados. <br><br>
+                  </p>
+              </li>
+                <li class="services__modal-service">
+                    <div>
+                      <p class="services__modal-info">
+                        <i class="bi bi-hourglass-top"></i> <strong>Carga Horária</strong>: 40
+                        horas/mês. <br><br>
+                        <i class="bi bi-wallet2"></i> <strong>Custo Mensal</strong>: R$ 2.150,00.
+                        <br><br>
+                        <i class="bi bi-bullseye"></i> <strong>Diferencial</strong>: O Pacote Prata
+                        oferece um suporte mais frequente e flexível, que acompanha o ritmo de
+                        crescimento do cliente, auxiliando na gestão das finanças e oferecendo mais
+                        controle sobre os resultados.
+                    </p>
                     </div>
+                </li>
+            </ul>
 
-                </div>
+              </div>
+            </div>
+          </div>
 
-                <div class="experience">
-                    <h3 class="qualification__title">
-                        <i class="bi bi-briefcase"></i> Experiências
-                    </h3>
+          <div class="services__content">
+            <div>
+              <i class="bi bi-box-seam services__icon-ouro"></i>
+              <h3 class="services__title">Pacote ouro></h3>
+            </div>
+            <span class="services__button">
+              Visualizar pacote <i class="bi bi-arrow-right services__button-icon"></i>
+            </span>
+            <div class="services__modal">
+              <div class="services__modal-content">
+                <i class="uil uil-times services__modal-close"></i>
 
-                    <div class="timeline">
-                        <div class="timeline__item">
-                            <div class="circle__dot-experience1"></div>
-                            <h3 class="timeline__title">Cargo: Auxiliar financeiro | Empresa: HappyBiz Tecnologia e
-                                Sistemas</h3><br>
-                            <p class="timeline__text">Na HappyBiz Tecnologia e Sistemas, tive o privilégio de
-                                desempenhar uma variedade de funções essenciais para o funcionamento eficiente da
-                                empresa. Isso inclui o controle meticuloso e o lançamento de contas a receber e a pagar,
-                                garantindo que todos os registros financeiros estejam atualizados e precisos. Realizei
-                                também conciliação bancária, gerenciando arquivos de remessa e retorno para manter a
-                                integridade das transações financeiras.
-                                <br><br>
-                                Além disso, fui responsável pela gestão de compras e estoque, assegurando que os
-                                suprimentos necessários estivessem disponíveis conforme demanda. Também participei
-                                ativamente da gestão de departamento pessoal, auxiliando em questões relacionadas a
-                                recursos humanos e folha de pagamento.
-                                <br><br>
-                                Contribuí significativamente para a organização de processos financeiros, implementando
-                                práticas que melhoraram a eficiência operacional e a conformidade regulatória. Emiti
-                                boletos e notas fiscais com precisão e pontualidade, facilitando o fluxo de caixa e o
-                                cumprimento das obrigações fiscais da empresa.
-                                <br><br>
-                                Por fim, desempenhei um papel crucial na organização e arquivamento de documentos
-                                importantes, garantindo fácil acesso e conformidade com normas legais. Essas
-                                responsabilidades demonstram minha capacidade de gerenciar múltiplas tarefas de maneira
-                                eficiente e contribuir para o sucesso operacional da HappyBiz Tecnologia e Sistemas.
-                            </p>
-                            <br>
-                            <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
-                                Janeiro de 2018 - Fevereiro de 2020 · 2 anos 2 meses
-                            </span>
-                        </div>
+                <h3 class="services__modal-title">Pacote ouro</h3>
+                <p class="services__modal-description">
+                  Para empresas que buscam uma gestão financeira e administrativa completa,
+                  com atenção personalizada e relatórios detalhados para melhor análise de desempenho.
+              </p>
 
+              <ul class="services__modal-services grid">
+                <li class="services__modal-service">
+                    <i class="bi bi-check2-circle services__modal-icon"></i>
+                    <p class="services__modal-info">Controle de Contas a Pagar: <br>
+                      - Lançamento e provisionamento em sistema financeiro; <br>
+                      - Solicitação, recebimento e arquivamento de notas de fornecedores; <br>
+                      - Compras de insumos; <br>
+                      - Baixas de pagamentos. <br>
+                  </p>
+                </li>
+                <li class="services__modal-service">
+                    <i class="bi bi-check2-circle services__modal-icon"></i>
+                    <p class="services__modal-info">Controle de Contas a Receber: <br>
+                      - Emissão de notas e boletos; <br>
+                      - Lançamento e provisionamento de recebimentos; <br>
+                      - Cobrança de inadimplência; <br>
+                      - Relatórios detalhados conforme a necessidade. <br>
+                  </p>
+                </li>
+                <li class="services__modal-service">
+                    <i class="bi bi-check2-circle services__modal-icon"></i>
+                    <p class="services__modal-info">Serviços Administrativos: <br>
+                      - Gestão de agenda; <br>
+                      - Gestão de contratos; <br>
+                      - Atendimento ao clientes; <br>
+                      - Gestão de e-mails. <br>
+                  </p>
+                </li>
+                <li class="services__modal-service">
+                  <i class="bi bi-check2-circle services__modal-icon"></i>
+                  <p class="services__modal-info">Suporte Essencial: <br>
+                    - Respostas a perguntas frequentes sobre processos financeiros; <br>
+                    - Atualizações semanais sobre status de contas; <br>
+                    - Agendamento de reuniões para análise de desempenho e planejamento; <br>
+                    - Assistência prioritária em dúvidas e questões urgentes. <br><br>
+                </p>
+              </li>
+                <li class="services__modal-service">
+                    <div>
+                      <p class="services__modal-info">
+                        <i class="bi bi-hourglass-top"></i> <strong>Carga Horária</strong>: 60
+                        horas/mês. <br>
+                        <i class="bi bi-wallet2"></i> <strong>Custo Mensal</strong>: R$ 3.200,00.
                         <br>
-
-                        <div class="timeline__item">
-                            <div class="circle__dot-experience2"></div>
-                            <h3 class="timeline__title">Cargo: Analista Financeiro Junior | Empresa: Prime Arte</h3><br>
-                            <p class="timeline__text">Na minha atual posição, desempenho uma série de funções cruciais
-                                para o funcionamento eficiente da empresa. Isso inclui desde o cadastro detalhado de
-                                fornecedores até o meticuloso acompanhamento e baixa de contas a pagar. Sou responsável
-                                também pelo lançamento e gestão de notas fiscais, assegurando que todas as transações
-                                sejam devidamente registradas e documentadas.
-                                <br><br>
-                                Além disso, desempenho um papel fundamental na gestão de compras e orçamentos,
-                                trabalhando para garantir que as necessidades da empresa sejam atendidas dentro das
-                                diretrizes financeiras estabelecidas. Colaboro diretamente com a contabilidade,
-                                fornecendo informações precisas e essenciais para o processo de tomada de decisão.
-                                <br><br>
-                                Internamente, ofereço suporte à equipe, auxiliando em diversas demandas operacionais e
-                                administrativas. Emito notas de faturamento com precisão e cuido do controle e envio de
-                                equipamentos utilizados pela equipe. Além disso, sou responsável pelo cadastro e
-                                atualização de clientes, garantindo um relacionamento fluido e organizado.
-                                <br><br>
-                                Para assegurar a integridade financeira da empresa, realizo conciliação bancária
-                                regularmente e mantenho um controle rigoroso sobre notas de fornecedores, assegurando
-                                que todas as obrigações sejam cumpridas de maneira oportuna. Por fim, sou encarregado da
-                                emissão de boletos, contribuindo para o fluxo de caixa da empresa de maneira eficiente e
-                                confiável.
-                                <br><br>
-                                Essas responsabilidades abrangentes refletem não apenas minha habilidade de gerenciar
-                                múltiplas tarefas com precisão, mas também meu compromisso em garantir a eficiência e
-                                conformidade dentro do ambiente corporativo.
-                            </p>
-                            <br>
-                            <span class="timeline__date"><i class="bi bi-calendar2-range"></i>
-                                Novembro de 2020 - Até o momento · 4 anos 1 mês
-                            </span>
-                        </div>
-
+                        <i class="bi bi-bullseye"></i> <strong>Diferencial</strong>: O Pacote Ouro
+                        oferece um serviço completo e altamente personalizado, permitindo que o
+                        cliente tenha uma gestão detalhada de todas as áreas financeiras e
+                        administrativas, com um acompanhamento próximo e prioritário para questões
+                        importantes.
+                    </p>
                     </div>
-                </div>
+                </li>
+            </ul>
+
+              </div>
             </div>
-        </section>
-        <!--===== Packages =====-->
-        <section class="services section" id="pacotes">
-            <h2 data-heading="Soluções sob medida para o seu sucesso!" class="section__title">Conheça as opções!</h2>
+          </div>
 
 
-            <div class="services__container container grid">
-                <div class="services__content bronze">
-                    <div>
-                        <!-- Ícone para Pacote Bronze -->
-                        <i class="bi bi-box-seam services__icon"></i>
-                        <h3 class="services__title"><span>Pacote bronze</span></h3>
-                    </div>
-                    <span class="services__button">
-                        Visualizar pacote <i class="bi bi-arrow-right services__button-icon"></i>
-                    </span>
+        </div>
+      </section>
 
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <i class="bi bi-x-square services__modal-close"></i>
+      <!--===== Testimonials =====-->
+      <section class="testimonials section">
+        <h2 data-heading="Transformando Ideias em Resultados" class="section__title">
+          Feedbacks!
+        </h2>
+        <div class="work__container container grid"></div>
 
-                            <h3 class="services__modal-title">Pacote bronze</h3>
-                            <p class="services__modal-description">
-                                Ideal para pequenas empresas que precisam de suporte básico em finanças e administração,
-                                proporcionando mais organização nas tarefas essenciais sem sobrecarregar o orçamento.
-                            </p>
+        <div class="testimonials__container container swiper">
+          <div class="swiper-wrapper">
+            <div class="testimonial__card swiper-slide">
+              <div class="testimonial__quote">
+                <i class="bx bxs-quote-alt-left"></i>
+              </div>
+              <p class="testimonial__description">Tive o prazer de trabalhar com a Dayane, uma excelente
+                profissional. Totalmente dedica e zelosa com o seu trabalho. Demostrou ser uma pessoa
+                integra de extrema confiança.
+                Durante a sua passagem pela empresa, ela foi colaborativa com todos os setores. Desenvolveu
+                uma ótima relação com a equipe e clientes.</p>
+                <h3 class="testimonial__date">Em 24 de outubro de 2020, Paloma trabalhava com Dayane mas em
+                  equipes diferentes</h3>
+              <div class="testimonial__profile">
+                <img
+                  src="./assets/img/paloma.png"
+                  alt=""
+                  class="testimonial__profile-img" />
 
-                            <ul class="services__modal-services grid">
-                                <li class="services__modal-service">
-                                    <i class="bi bi-check2-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Controle de Contas a Pagar: <br>
-                                        - Lançamento e arquivamento de notas de fornecedores; <br>
-                                        - Baixas de pagamentos. <br>
-                                    </p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="bi bi-check2-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Controle de Contas a Receber: <br>
-                                        - Emissão de notas e boletos; <br>
-                                        - Lançamento de recebimentos. <br>
-                                    </p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="bi bi-check2-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Suporte Essencial: <br>
-                                        - Respostas a perguntas frequentes sobre processos financeiros; <br>
-                                        - Atualizações mensais sobre status de contas. <br>
-                                    </p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <div>
-                                        <p class="services__modal-info">
-                                            <i class="bi bi-hourglass-top"></i> <strong>Carga Horária</strong>: 20
-                                            horas/mês. <br>
-                                            <i class="bi bi-wallet2"></i> <strong>Custo Mensal</strong>: R$ 1.000,00.
-                                            <br>
-                                            <i class="bi bi-bullseye"></i> <strong>Diferencial</strong>: Com o Pacote
-                                            Bronze, o cliente recebe um suporte essencial e acessível para aliviar
-                                            tarefas
-                                            financeiras e manter controle sobre as contas, ideal para quem precisa de um
-                                            ponto de partida sem compromissos maiores.
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="testimonial__profile-data">
+                  <span class="testimonial__profile-name">Paloma Santos</span>
+                  <span class="testimonial__profile-detail">Comunicação Interna e Externa | Engajamento &
+                    Desenvolvimento</span>
                 </div>
-
-                <div class="services__content prata">
-                    <div>
-                        <!-- Ícone para Pacote Prata -->
-                        <i class="bi bi-box-seam services__icon"></i>
-                        <h3 class="services__title"><span>Pacote prata</span></h3>
-                    </div>
-                    <span class="services__button">
-                        Visualizar pacote <i class="bi bi-arrow-right services__button-icon"></i>
-                    </span>
-
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <i class="bi bi-x-square services__modal-close"></i>
-
-                            <h3 class="services__modal-title">Pacote prata</h3>
-                            <p class="services__modal-description">
-                                Para empresas em crescimento que precisam de um suporte mais robusto em finanças e
-                                administração,
-                                ajudando a manter a organização financeira enquanto se expandem.
-                            </p>
-
-                            <ul class="services__modal-services grid">
-                                <li class="services__modal-service">
-                                    <i class="bi bi-check2-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Controle de Contas a Pagar: <br>
-                                        - Lançamento e provisionamento em sistema financeiro; <br>
-                                        - Solicitação e arquivamento de notas de fornecedores. <br>
-                                    </p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="bi bi-check2-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Controle de Contas a Receber: <br>
-                                        - Emissão de notas e boletos; <br>
-                                        - Lançamento de recebimentos; <br>
-                                        - Cobrança de inadimplência; <br>
-                                        - Relatórios conforme a necessidade. <br>
-                                    </p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="bi bi-check2-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Serviços Administrativos: <br>
-                                        - Gestão de agenda; <br>
-                                        - Gestão de contratos. <br>
-                                    </p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="bi bi-check2-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Suporte Essencial: <br>
-                                        - Respostas a perguntas frequentes sobre processos financeiros; <br>
-                                        - Atualizações quinzenais sobre status de contas; <br>
-                                        - Agendamento de reuniões para revisão de resultados. <br>
-                                    </p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <div>
-                                        <p class="services__modal-info">
-                                            <i class="bi bi-hourglass-top"></i> <strong>Carga Horária</strong>: 40
-                                            horas/mês. <br>
-                                            <i class="bi bi-wallet2"></i> <strong>Custo Mensal</strong>: R$ 2.150,00.
-                                            <br>
-                                            <i class="bi bi-bullseye"></i> <strong>Diferencial</strong>: O Pacote Prata
-                                            oferece um suporte mais frequente e flexível, que acompanha o ritmo de
-                                            crescimento do cliente, auxiliando na gestão das finanças e oferecendo mais
-                                            controle sobre os resultados.
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="services__content ouro">
-                    <div>
-                        <!-- Ícone para Pacote Ouro -->
-                        <i class="bi bi-box-seam services__icon"></i>
-                        <h3 class="services__title"><span>Pacote ouro</span></h3>
-                    </div>
-                    <span class="services__button">
-                        Visualizar pacote <i class="bi bi-arrow-right services__button-icon"></i>
-                    </span>
-
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <i class="bi bi-x-square services__modal-close"></i>
-
-                            <h3 class="services__modal-title">Pacote ouro</h3>
-                            <p class="services__modal-description">
-                                Para empresas que buscam uma gestão financeira e administrativa completa,
-                                com atenção personalizada e relatórios detalhados para melhor análise de desempenho.
-                            </p>
-
-                            <ul class="services__modal-services grid">
-                                <li class="services__modal-service">
-                                    <i class="bi bi-check2-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Controle de Contas a Pagar: <br>
-                                        - Lançamento e provisionamento em sistema financeiro; <br>
-                                        - Solicitação, recebimento e arquivamento de notas de fornecedores; <br>
-                                        - Compras de insumos; <br>
-                                        - Baixas de pagamentos. <br>
-                                    </p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="bi bi-check2-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Controle de Contas a Receber: <br>
-                                        - Emissão de notas e boletos; <br>
-                                        - Lançamento e provisionamento de recebimentos; <br>
-                                        - Cobrança de inadimplência; <br>
-                                        - Relatórios detalhados conforme a necessidade. <br>
-
-                                    </p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="bi bi-check2-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Serviços Administrativos: <br>
-                                        - Gestão de agenda; <br>
-                                        - Gestão de contratos; <br>
-                                        - Atendimento ao clientes; <br>
-                                        - Gestão de e-mails. <br>
-                                    </p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="bi bi-check2-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Suporte Essencial: <br>
-                                        - Respostas a perguntas frequentes sobre processos financeiros; <br>
-                                        - Atualizações semanais sobre status de contas; <br>
-                                        - Agendamento de reuniões para análise de desempenho e planejamento; <br>
-                                        - Assistência prioritária em dúvidas e questões urgentes. <br>
-                                    </p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <div>
-                                        <p class="services__modal-info">
-                                            <i class="bi bi-hourglass-top"></i> <strong>Carga Horária</strong>: 60
-                                            horas/mês. <br>
-                                            <i class="bi bi-wallet2"></i> <strong>Custo Mensal</strong>: R$ 3.200,00.
-                                            <br>
-                                            <i class="bi bi-bullseye"></i> <strong>Diferencial</strong>: O Pacote Ouro
-                                            oferece um serviço completo e altamente personalizado, permitindo que o
-                                            cliente tenha uma gestão detalhada de todas as áreas financeiras e
-                                            administrativas, com um acompanhamento próximo e prioritário para questões
-                                            importantes.
-                                        </p>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
 
-        </section>
+            <div class="testimonial__card swiper-slide">
+              <div class="testimonial__quote">
+                <i class="bx bxs-quote-alt-left"></i>
+              </div>
+              <p class="testimonial__description">A Day (como carinhosamente a chamava), é o tipo de
+                profissional que deixa o ambiente de trabalho
+                "mais leve". Sempre foi muito dedicada, disponível e cuidadosa para tirar as dúvidas de
+                todos os colaboradores da empresa.
+                Eu a recomendo sem dúvidas, merece sempre todo o sucesso!</p>
+                <h3 class="testimonial__date">Em 16 de março de 2021, Caroline trabalhava com Dayane mas em
+                  equipes diferentes</h3>
+              <div class="testimonial__profile">
+                <img
+                  src="./assets/img/caroline.png"
+                  alt=""
+                  class="testimonial__profile-img" />
 
-        <!--===== Feedback =====-->
-        <section class="testimonial section" id="depoimentos">
-            <h2 data-heading="Transformando Ideias em Resultados" class="section__title">Feedbacks!</h2>
-
-            <div class="testimonials__container container swiper">
-                <!-- Este div envolve todos os slides -->
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="testimonial__card swiper-slide">
-                        <div class="testimonial__quote">
-                            <i class='bx bxs-quote-left'></i>
-                        </div>
-                        <p class="testimonial__description">Tive o prazer de trabalhar com a Dayane, uma excelente
-                            profissional. Totalmente dedica e zelosa com o seu trabalho. Demostrou ser uma pessoa
-                            integra de extrema confiança.
-                            Durante a sua passagem pela empresa, ela foi colaborativa com todos os setores. Desenvolveu
-                            uma ótima relação com a equipe e clientes.</p>
-                        <h3 class="testimonial__date">Em 24 de outubro de 2020, Paloma trabalhava com Dayane mas em
-                            equipes diferentes</h3>
-                        <div class="testimonial__profile">
-                            <img src="assets/img/paloma.png" alt="" class="testimonial_profile-img">
-                            <div class="testimonial__profile-data">
-                                <span class="testimonial__profile-name">Paloma Santos</span>
-                                <span class="testimonial__profile-detail">Comunicação Interna e Externa | Engajamento &
-                                    Desenvolvimento</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="testimonial__card swiper-slide">
-                        <div class="testimonial__quote">
-                            <i class='bx bxs-quote-left'></i>
-                        </div>
-                        <p class="testimonial__description">A Day (como carinhosamente a chamava), é o tipo de
-                            profissional que deixa o ambiente de trabalho
-                            "mais leve". Sempre foi muito dedicada, disponível e cuidadosa para tirar as dúvidas de
-                            todos os colaboradores da empresa.
-                            Eu a recomendo sem dúvidas, merece sempre todo o sucesso!</p>
-                        <h3 class="testimonial__date">Em 16 de março de 2021, Caroline trabalhava com Dayane mas em
-                            equipes diferentes</h3>
-                        <div class="testimonial__profile">
-                            <img src="assets/img/caroline.png" alt="" class="testimonial_profile-img">
-                            <div class="testimonial__profile-data">
-                                <span class="testimonial__profile-name">Caroline Ramos</span>
-                                <span class="testimonial__profile-detail">Publicitária | Comunicação e Marketing |
-                                    Produção Audiovisual | Design Gráfico</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="testimonial__card swiper-slide">
-                        <div class="testimonial__quote">
-                            <i class='bx bxs-quote-left'></i>
-                        </div>
-                        <p class="testimonial__description">Excelente profissional com facilidade de desenvolver suas
-                            tarefas e rotinas com perfeição. Foi um prazer trabalhar com você.</p>
-                        <h3 class="testimonial__date">Em 7 de novembro de 2024, Jonathan trabalhava com Dayane na mesma
-                            equipe</h3>
-                        <div class="testimonial__profile">
-                            <img src="assets/img/jhon.png" alt="" class="testimonial_profile-img">
-                            <div class="testimonial__profile-data">
-                                <span class="testimonial__profile-name">Jonathan Moura Ferreira</span>
-                                <span class="testimonial__profile-detail">Financial Business Analyst</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="testimonial__profile-data">
+                  <span class="testimonial__profile-name">Caroline Ramos</span>
+                  <span class="testimonial__profile-detail">Publicitária | Comunicação e Marketing |
+                      Produção Audiovisual | Design Gráfico</span>
                 </div>
-
-                <!-- Div para a paginação -->
-                <div class="swiper-pagination"></div>
+              </div>
             </div>
 
-        </section>
+            <div class="testimonial__card swiper-slide">
+              <div class="testimonial__quote">
+                <i class="bx bxs-quote-alt-left"></i>
+              </div>
+              <p class="testimonial__description">Excelente profissional com facilidade de desenvolver suas
+                tarefas e rotinas com perfeição. Foi um prazer trabalhar com você.
+              </p>
+              <h3 class="testimonial__date">Em 7 de novembro de 2024, Jonathan trabalhava com Dayane na mesma
+              equipe</h3>
+              <div class="testimonial__profile">
+                <img
+                  src="./assets/img/jhon.png"
+                  alt=""
+                  class="testimonial__profile-img" />
+
+                <div class="testimonial__profile-data">
+                  <span class="testimonial__profile-name">Jonathan Moura Ferreira</span>
+                  <span class="testimonial__profile-detail">Financial Business Analyst</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!--===== Contact =====-->
+      <section class="contact section" id="contact">
+        <h2 data-heading="Envie sua mensagem" class="section__title">será um prazer te responder!</h2>
+
+        <div class="contact__container container grid">
+          <div class="contact__content">
+            <div class="contact__info">
+              <div class="contact__card">
+                <i class="bi bi-envelope-at contact__card-icon"></i>
+                <h3 class="contact__card-title">E-mail:</h3>
+                <span class="contact__card-data">df.assistenciavirtual@gmail.com</span>
+                <span class="contact__button">
+                  Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+                </span>
+              </div>
+
+              <div class="contact__card">
+                <i class="bi bi-whatsapp contact__card-icon"></i>
+                <h3 class="contact__card-title">Whatsapp:</h3>
+                <span class="contact__card-data">+55 (11) 94241 - 3623</span>
+                <span class="contact__button">
+                  Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+                </span>
+              </div>
+
+              <div class="contact__card">
+                <i class="bi bi-linkedin contact__card-icon"></i>
+                <h3 class="contact__card-title">LinkdIn</h3>
+                <span class="contact__card-data">in/dayanefunaki/</span>
+                <span class="contact__button">
+                  Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__content">
+            <from class="contact__form">
+              <div class="input__container">
+                <input type="text" class="input">
+                <label for="">Username</label>
+                <span>Username</span>
+              </div>
+
+              <div class="input__container">
+                <input type="email" class="input">
+                <label for="">Email</label>
+                <span>Email</span>
+              </div>
+
+              <div class="input__container">
+                <input type="tel" class="input">
+                <label for="">Phone</label>
+                <span>Phone</span>
+              </div>
+
+              <div class="input__container textarea">
+                <textarea name="" id="" class="input"></textarea>
+                <label for="">Message</label>
+                <span>Message</span>
+              </div>
+              <button class="button"><i class="uil uil-navigator button__icon"></i>
+                Send Message
+              </button>
+            </from>
+          </div>
+        </div>
+      </section>
 
         <!--===== FOOTER =====-->
         <footer class="footer">
-            <div class="footer__bg">
-                <div class="footer__container container grid">
-                    <div>
-                        <h1 class="footer__title"><span>Dayane Funaki</span></h1>
-                        <span class="footer__subtitle">Financeiro | Administrativo | Contas a Pagar | Contas a Receber | Faturamento | BPO financeiro</span>
-                    </div>
+          <div class="footer__bg">
+              <div class="footer__container container grid">
+                  <div>
+                      <h1 class="footer__title"><span>Dayane Funaki</span></h1>
+                      <span class="footer__subtitle">Financeiro | Administrativo | Contas a Pagar | Contas a Receber | Faturamento | BPO financeiro</span>
+                  </div>
 
-                    <ul class="footer__links"> Entre em contato comigo: 
-                        <li>
-                            <a href="https://api.whatsapp.com/send?phone=5511942413623&text=&type=phone_number&app_absent=0"
-                               target="_blank" class="footer__link"><i class="bi bi-whatsapp"></i> Converse pelo whatsApp</a>
-                        </li>                        
+                  <ul class="footer__links"> Entre em contato comigo: 
+                      <li>
+                          <a href="https://api.whatsapp.com/send?phone=5511942413623&text=&type=phone_number&app_absent=0"
+                             target="_blank" class="footer__link"><i class="bi bi-whatsapp"></i> Converse pelo whatsApp</a>
+                      </li>                        
 
-                        <li>
-                            <a href="mailto:df.assistenciavirtual@gmail.com?subject=Contato%20do%20site%20DF%20Assistencia%20Virtual&body=Olá%20Dayane,%0D%0A%0D%0AVi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços.%0D%0A%0D%0AAtenciosamente,%0D%0A[Seu%20Nome]%0D%0AMeu%20número%20de%20contato%20é:%20[Seu%20Número]"
-                               class="footer__link"><i class="bi bi-envelope-fill"></i> Envie um e-mail</a>
-                        </li>                      
-                        
-                        <li>
-                            <a href="tel:+5511942413623" class="footer__link"><i class="bi bi-telephone-fill"></i> Entre em contato</a>
-                        </li>
-                        
-                    </ul>
+                      <li>
+                          <a href="mailto:df.assistenciavirtual@gmail.com?subject=Contato%20do%20site%20DF%20Assistencia%20Virtual&body=Olá%20Dayane,%0D%0A%0D%0AVi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços.%0D%0A%0D%0AAtenciosamente,%0D%0A[Seu%20Nome]%0D%0AMeu%20número%20de%20contato%20é:%20[Seu%20Número]"
+                             class="footer__link"><i class="bi bi-envelope-fill"></i> Envie um e-mail</a>
+                      </li>                      
+                      
+                      <li>
+                          <a href="tel:+5511942413623" class="footer__link"><i class="bi bi-telephone-fill"></i> Entre em contato</a>
+                      </li>
+                      
+                  </ul>
 
-                    <div class="footer__socials"> Rede Social: 
-                        <a href="https://www.instagram.com/df.assistenciavirtual/" target="_blank" class="footer__social">
-                            <i class="bi bi-instagram"></i> @df.assistenciavirtual
-                        </a>
-                        <a href="https://www.linkedin.com/in/dayanefunaki/" target="_blank" class="footer__social">
-                            <i class="bi bi-linkedin"></i> In/dayanefunaki
-                        </a>
-                    </div>
-                    
-                </div>
-                
-                <p class="footer__verse">"Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos!" - Provérbios 16:3</p>
-                <p class="footer__copy">DF Assistência Virtual &#169; 2024 -  All rights reserved</p>
-                <p class="footer__developed">
-                    <i class="bi bi-code"></i> 
-                    Site desenvolvido por 
-                    <a href="https://www.linkedin.com/in/rogerfunaki/" target="_blank">Roger Funaki</a> 
-                    <i class="bi bi-code-slash"></i>
-                </p>
-                
-            </div>
-        </footer>       
-        
+                  <div class="footer__socials"> Rede Social: 
+                      <a href="https://www.instagram.com/df.assistenciavirtual/" target="_blank" class="footer__social">
+                          <i class="bi bi-instagram"></i> @df.assistenciavirtual
+                      </a>
+                      <a href="https://www.linkedin.com/in/dayanefunaki/" target="_blank" class="footer__social">
+                          <i class="bi bi-linkedin"></i> In/dayanefunaki
+                      </a>
+                  </div>
+                  
+              </div>
+              
+              <p class="footer__verse">"Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos!" - Provérbios 16:3</p>
+              <p class="footer__copy">DF Assistência Virtual &#169; 2024 -  All rights reserved</p>
+              <p class="footer__developed">
+                  <i class="bi bi-code"></i> 
+                  Site desenvolvido por 
+                  <a href="https://www.linkedin.com/in/rogerfunaki/" target="_blank">Roger Funaki</a> 
+                  <i class="bi bi-code-slash"></i>
+              </p>
+              
+          </div>
+      </footer> 
+
 
     </main>
 
+
+
     <!--========== SCROLL UP ==========-->
 
-
     <!--========== MIXITUP FILTER ==========-->
-    <script src="assets/js/mixitup.min.js"></script>
+    <script src="./assets/js/mixitup.min.js"></script>
 
     <!--========== SWIPER JS ==========-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
 
     <!--========== MAIN JS ==========-->
-    <script src="assets/js/main.js"></script>
-</body>
-
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>
