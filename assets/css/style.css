@@ -911,9 +911,12 @@ input {
   cursor: pointer;
 }
 
-.services__modal-title,
-.services__modal-description {
+.services__modal-title {
   text-align: center;
+}
+
+.services__modal-description {
+  text-align: left;
 }
 
 .services__modal-title {
@@ -945,6 +948,7 @@ input {
 
 .services__modal-info {
   font-size: var(--small-font-size);
+  
 }
 
 /* Active Modal*/

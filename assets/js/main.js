@@ -257,3 +257,28 @@ document.querySelectorAll('.nav__link').forEach(link => {
   });
 });
 
+// input do contatos
+
+function updateLabel(input, newText) {
+  const container = input.closest('.input__container');
+  const label = container.querySelector('label');
+  const span = container.querySelector('span');
+
+  if (!input.value) { // Verifica se o campo está vazio
+    label.textContent = newText;
+    span.textContent = newText;
+  }
+  container.classList.add('focus'); // Adiciona um estado visual se necessário
+}
+
+function resetLabel(input) {
+  const container = input.closest('.input__container');
+  const label = container.querySelector('label');
+  const span = container.querySelector('span');
+
+  if (!input.value) { // Apenas redefine se o campo estiver vazio
+    label.textContent = label.getAttribute('data-default');
+    span.textContent = span.getAttribute('data-default');
+  }
+  container.classList.remove('focus');
+}

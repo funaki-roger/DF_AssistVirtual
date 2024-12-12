@@ -748,59 +748,30 @@
 
                 <h3 class="services__modal-title">Pacote personalizado</h3>
                 <p class="services__modal-description">
-                  Para empresas que buscam uma gestão financeira e administrativa completa,
-                  com atenção personalizada e relatórios detalhados para melhor análise de desempenho.
+                  Ideal para quem precisa de uma gestão financeira e administrativa completa, com atendimento personalizado e 
+                  soluções ajustadas às suas necessidades. Relatórios detalhados e análises estratégicas ajudam a maximizar 
+                  seu desempenho e apoiar decisões assertivas.
               </p>
 
               <ul class="services__modal-services grid">
                 <li class="services__modal-service">
                     <i class="bi bi-check2-circle services__modal-icon"></i>
-                    <p class="services__modal-info">Controle de Contas a Pagar: <br>
-                      - Lançamento e provisionamento em sistema financeiro; <br>
-                      - Solicitação, recebimento e arquivamento de notas de fornecedores; <br>
-                      - Compras de insumos; <br>
-                      - Baixas de pagamentos. <br>
-                  </p>
+                    <p class="services__modal-info">
+                      Oferecemos um pacote totalmente personalizado, desenvolvido para atender às suas necessidades específicas 
+                      com soluções sob medida. <br><br>
+                    </p>
+                    
                 </li>
-                <li class="services__modal-service">
-                    <i class="bi bi-check2-circle services__modal-icon"></i>
-                    <p class="services__modal-info">Controle de Contas a Receber: <br>
-                      - Emissão de notas e boletos; <br>
-                      - Lançamento e provisionamento de recebimentos; <br>
-                      - Cobrança de inadimplência; <br>
-                      - Relatórios detalhados conforme a necessidade. <br>
-                  </p>
-                </li>
-                <li class="services__modal-service">
-                    <i class="bi bi-check2-circle services__modal-icon"></i>
-                    <p class="services__modal-info">Serviços Administrativos: <br>
-                      - Gestão de agenda; <br>
-                      - Gestão de contratos; <br>
-                      - Atendimento ao clientes; <br>
-                      - Gestão de e-mails. <br>
-                  </p>
-                </li>
-                <li class="services__modal-service">
-                  <i class="bi bi-check2-circle services__modal-icon"></i>
-                  <p class="services__modal-info">Suporte Essencial: <br>
-                    - Respostas a perguntas frequentes sobre processos financeiros; <br>
-                    - Atualizações semanais sobre status de contas; <br>
-                    - Agendamento de reuniões para análise de desempenho e planejamento; <br>
-                    - Assistência prioritária em dúvidas e questões urgentes. <br><br>
-                </p>
-              </li>
+
                 <li class="services__modal-service">
                     <div>
                       <p class="services__modal-info">
-                        <i class="bi bi-hourglass-top"></i> <strong>Carga Horária</strong>: 60
-                        horas/mês. <br><br>
-                        <i class="bi bi-wallet2"></i> <strong>Custo Mensal</strong>: R$ 3.200,00.
+                        <i class="bi bi-hourglass-top"></i> <strong>Carga Horária</strong>: A combinar horas/mês. <br><br>
+                        <i class="bi bi-wallet2"></i> <strong>Custo Mensal</strong>: A combinar
                         <br><br>
-                        <i class="bi bi-bullseye"></i> <strong>Diferencial</strong>: O Pacote Ouro
-                        oferece um serviço completo e altamente personalizado, permitindo que o
-                        cliente tenha uma gestão detalhada de todas as áreas financeiras e
-                        administrativas, com um acompanhamento próximo e prioritário para questões
-                        importantes.
+                        <i class="bi bi-bullseye"></i> <strong>Diferencial</strong>: O Pacote personalizado é projetado para atender às 
+                        demandas únicas de cada cliente. Com foco em eficiência e resultados, fornecemos suporte completo, relatórios 
+                        claros e uma abordagem estratégica que garante soluções sob medida para otimizar sua gestão e alcançar seus objetivos.
                     </p>
                     </div>
                 </li>
@@ -915,7 +886,7 @@
                   class="contact__button"
                   target="_blank"
                   rel="noopener noreferrer">
-                  Escreva-me <i class="uil uil-arrow-right contact__button-icon"></i>
+                  Fale comigo por e-mail, é só clicar! <i class="uil uil-arrow-right contact__button-icon"></i>
                 </a>
               </div>
               
@@ -927,9 +898,8 @@
                   href="https://wa.me/5511942413623?text=Olá%20Dayane,%20gostaria%20de%20conversar%20sobre%20seus%20serviços."
                   class="contact__button"
                   target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Escreva-me <i class="uil uil-arrow-right contact__button-icon"></i>
+                  rel="noopener noreferrer">
+                  Clique e me chame no WhatsApp! <i class="uil uil-arrow-right contact__button-icon"></i>
                 </a>
               </div>
               
@@ -941,9 +911,8 @@
                   href="https://www.linkedin.com/in/dayanefunaki/"
                   class="contact__button"
                   target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Escreva-me <i class="uil uil-arrow-right contact__button-icon"></i>
+                  rel="noopener noreferrer">
+                  Clique e faça parte da minha rede no LinkedIn! <i class="uil uil-arrow-right contact__button-icon"></i>
                 </a>
               </div>
 
@@ -951,34 +920,40 @@
           </div>
 
           <div class="contact__content">
-            <from class="contact__form">
+            <form class="contact__form">
               <div class="input__container">
-                <input type="text" class="input">
-                <label for="">Seu Nome</label>
-                <span>Seu Nome</span>
+                <input type="text" class="input" onfocus="updateLabel(this, 'Nome')" onblur="resetLabel(this)">
+                <label for="" data-default="Seu Nome">Seu Nome</label>
+                <span data-default="Seu Nome">Seu Nome</span>
               </div>
-
+            
               <div class="input__container">
-                <input type="email" class="input">
-                <label for="">Seu e-mail</label>
-                <span>Seu e-mail</span>
+                <input type="email" class="input" onfocus="updateLabel(this, 'E-mail')" onblur="resetLabel(this)">
+                <label for="" data-default="Seu e-mail">Seu e-mail</label>
+                <span data-default="Seu e-mail">Seu e-mail</span>
               </div>
-
+            
               <div class="input__container">
-                <input type="tel" class="input">
-                <label for="">Seu telefone ou whatsApp</label>
-                <span>Seu telefone ou whatsApp</span>
+                <input type="tel" class="input" onfocus="updateLabel(this, 'Número')" onblur="resetLabel(this)">
+                <label for="" data-default="Seu telefone ou WhatsApp">Seu telefone ou WhatsApp</label>
+                <span data-default="Seu telefone ou WhatsApp">Seu telefone ou WhatsApp</span>
               </div>
-
+            
               <div class="input__container textarea">
-                <textarea name="" id="" class="input"></textarea>
-                <label for="">Messagem</label>
-                <span>Messagem</span>
+                <textarea class="input" onfocus="updateLabel(this, 'Mensagem')" onblur="resetLabel(this)"></textarea>
+                <label for="" data-default="Ou, se preferir, envie sua mensagem por aqui e eu responderei o mais rápido possível!">
+                  Ou, se preferir, envie sua mensagem por aqui e eu responderei o mais rápido possível!
+                </label>
+                <span data-default="Ou, se preferir, envie sua mensagem por aqui e eu responderei o mais rápido possível!">
+                  Ou, se preferir, envie sua mensagem por aqui e eu responderei o mais rápido possível!
+                </span>
               </div>
+            
               <button class="button"><i class="uil uil-navigator button__icon"></i>
-                Enviar sua mensagem !
+                Enviar sua mensagem!
               </button>
-            </from>
+            </form>
+            
           </div>
           
         </div>
@@ -990,7 +965,7 @@
               <div class="footer__container container grid">
                   <div>
                       <h1 class="footer__title"><span>Dayane Funaki</span></h1>
-                      <span class="footer__subtitle">Financeiro | Administrativo | Contas a Pagar | Contas a Receber | Faturamento | BPO financeiro</span>
+                      <span class="footer__subtitle">Soluções em Gestão: Financeiro, Administrativo, Contas a Pagar, Contas a Receber, Faturamento e BPO Financeiro.</span>
                   </div>
 
                   <ul class="footer__links"> Entre em contato comigo: 
