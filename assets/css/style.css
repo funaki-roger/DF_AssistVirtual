@@ -1097,10 +1097,10 @@ input {
   padding: .6rem 1.2rem;
   color: var(--title-color);
   font-weight: var(--font-medium);
-  font-size: var(--normal-font-size);
-  letter-spacing: .5px;
+  font-size: var(--small-font-size);
+  letter-spacing: .4px;
   outline: none;
-  border-radius: .5rem;
+  border-radius: .6rem;
   transition: .3s;
 }
 
@@ -1118,7 +1118,7 @@ textarea.input {
   transform: translateY(-50%);
   padding: 0 .4rem;
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: var(--small-font-size);
   font-weight: var(--font-medium);
   pointer-events: none;
   z-index: 15;
@@ -1139,7 +1139,7 @@ textarea.input {
   font-size: var(--smaller-font-size);
   padding: 0 .4rem;
   pointer-events: none;
-  z-index: var(--z-modal);
+  
 }
 
 .input__container span::before,
