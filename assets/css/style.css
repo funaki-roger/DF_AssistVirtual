@@ -813,7 +813,7 @@ input {
 
 /*===== Services Section =====*/
 .services__container {
-  grid-template-columns: repeat(3, 250px);
+  grid-template-columns: repeat(4, 250px);
   justify-content: center;
   column-gap: 1.8rem;
 }
@@ -845,6 +845,11 @@ input {
 
 .services__icon-ouro {
   color: #c9b332;
+  font-size: 1.8rem;
+}
+
+.services__icon-personalizado {
+  color: #32c932;
   font-size: 1.8rem;
 }
 
@@ -890,7 +895,7 @@ input {
 }
 
 .services__modal-content {
-  width: 900px;
+  width: 600px;
   position: relative;
   background-color: var(--box-color);
   padding: 4.5rem 2.5rem 2.5rem;
@@ -1306,6 +1311,11 @@ textarea.input {
   gap: 2.5rem;
 }
 
+.services__container{
+  grid-template-columns: repeat(2, 250px);
+  gap: 2.5rem;
+}
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -1416,8 +1426,10 @@ textarea.input {
   }
 
   .services__container {
-    grid-template-columns: repeat(3, 220px);
+    grid-template-columns: repeat(2, 220px);
+    gap: 1.5rem;
   }
+  
 
   .testimonial__card {
     padding: 1.25rem 1.5rem;
@@ -1580,6 +1592,13 @@ textarea.input {
   
   .services__modal-description {
     padding: 0;
+  }
+
+  .services__modal-content {
+    width: 90%;
+    max-height: 80vh; 
+    overflow-y: auto; 
+    padding: 2rem 1.5rem; 
   }
   
   .work__container{
