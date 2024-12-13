@@ -193,7 +193,7 @@ function navHighlighter() {
 window.addEventListener("scroll", navHighlighter);
 
 
-/*=============== SHOW SCROLL UP ===============*/
+/*=============== modal de notificação ===============*/
 
 
 // Função para exibir o modal de notificação
@@ -206,6 +206,8 @@ function showCopyModal() {
       copyModal.classList.remove('show');
   }, 3000);
 }
+
+/*=============== SHOW SCROLL UP ===============*/
 
 // Evento para simular a ação de copiar link
 document.querySelector('.btn__share').addEventListener('click', () => {
@@ -240,12 +242,12 @@ window.addEventListener('load', () => {
   }
 });
 
-document.querySelectorAll('.nav__link').forEach(link => {
-  link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
+// Adiciona evento para itens do menu
+const updateURLAndScroll = (link) => {
+  const targetId = link.getAttribute('href').substring(1);
+  const targetElement = document.getElementById(targetId);
 
+  if (targetElement) {
       // Rolagem suave até o elemento
       window.scrollTo({
           top: targetElement.offsetTop,
@@ -254,8 +256,33 @@ document.querySelectorAll('.nav__link').forEach(link => {
 
       // Atualiza a URL sem o "#" e sem recarregar a página
       history.pushState(null, null, `/${targetId}`);
+  }
+};
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      // Verifica se o caminho atual já está correto para evitar duplicação
+      const targetId = this.getAttribute('href').substring(1);
+      const currentPath = window.location.pathname.substring(1);
+
+      if (currentPath !== targetId) {
+          updateURLAndScroll(this);
+      } else {
+          // Apenas rola suavemente sem atualizar o histórico se já estiver na URL correta
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+              window.scrollTo({
+                  top: targetElement.offsetTop,
+                  behavior: 'smooth'
+              });
+          }
+      }
   });
 });
+
+//INPUT
 
 // Função chamada quando o campo recebe foco
 function updateLabel(input) {
