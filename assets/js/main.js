@@ -257,28 +257,44 @@ document.querySelectorAll('.nav__link').forEach(link => {
   });
 });
 
-// input do contatos
-
-function updateLabel(input, newText) {
+// Função chamada quando o campo recebe foco
+function updateLabel(input) {
   const container = input.closest('.input__container');
   const label = container.querySelector('label');
   const span = container.querySelector('span');
 
-  if (!input.value) { // Verifica se o campo está vazio
-    label.textContent = newText;
-    span.textContent = newText;
-  }
-  container.classList.add('focus'); // Adiciona um estado visual se necessário
+  // Recupera o texto dinâmico do argumento `data-default` do span
+  const newText = span.getAttribute('data-default');
+  
+  // Atualiza o texto do label e do span dinamicamente ao focar
+  label.textContent = newText;
+  span.textContent = newText;
+
+  container.classList.add('focus'); // Adiciona a classe "focus" ao container
+
+  // Remove a classe de erro (vermelha) e LED quando o campo recebe foco
+  input.classList.remove('error');
 }
 
+// Função chamada quando o campo perde foco
 function resetLabel(input) {
   const container = input.closest('.input__container');
   const label = container.querySelector('label');
   const span = container.querySelector('span');
 
-  if (!input.value) { // Apenas redefine se o campo estiver vazio
-    label.textContent = label.getAttribute('data-default');
-    span.textContent = span.getAttribute('data-default');
+  // Redefine o texto para o padrão se o campo estiver vazio
+  if (!input.value.trim()) {
+    const defaultText = label.getAttribute('data-default');
+    label.textContent = defaultText;
+    span.textContent = defaultText;
+
+    container.classList.remove('focus'); // Remove a classe "focus" se vazio
+
+    // Se o campo está vazio, adiciona a classe de erro e LED (bordas vermelhas)
+    input.classList.add('error');
+  } else {
+    // Remove a classe de erro e LED quando o campo for preenchido
+    input.classList.remove('error');
   }
-  container.classList.remove('focus');
 }
+

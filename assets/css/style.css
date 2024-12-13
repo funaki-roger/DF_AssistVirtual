@@ -1172,6 +1172,35 @@ textarea.input {
   opacity: 1;
 }
 
+/* Inicialização com borda preta */
+.input {
+  border: 2px solid black;
+  border-radius: 0.6rem; /* Mantém a borda arredondada */
+}
+
+/* Efeito LED na borda */
+@keyframes ledBorderAnimation {
+  0% {
+    border-color: red;
+  }
+  50% {
+    border-color: darkred;
+  }
+  100% {
+    border-color: red;
+  }
+}
+
+/* Borda vermelha com efeito LED (só se o campo estiver vazio e em erro) */
+.input.error {
+  animation: ledBorderAnimation 1s infinite; /* Animação simples de borda */
+}
+
+/* Borda vermelha para erro (quando o campo perde o foco e está vazio) */
+.input.error {
+  border-color: red;
+}
+
 /*=============== FOOTER ===============*/
 .footer{
   padding-top: 2rem;
