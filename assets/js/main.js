@@ -325,3 +325,61 @@ function resetLabel(input) {
   }
 }
 
+// Função para exibir o popup de sucesso
+function showSuccessPopup() {
+  const popup = document.createElement('div');
+  popup.classList.add('success-popup');
+  popup.textContent = 'Sua mensagem foi enviada! Em breve te respondemos, ou pode chamar no WhatsApp. 😊';
+  document.body.appendChild(popup);
+
+  // Remove o popup após 5 segundos
+  setTimeout(() => {
+    popup.remove();
+  }, 5000);
+}
+
+// Função para enviar o formulário e exibir mensagem de sucesso
+async function handleFormSubmission(event) {
+  event.preventDefault(); // Evita o comportamento padrão de envio
+
+  const form = event.target; // Obtém o formulário enviado
+  const formData = new FormData(form); // Coleta os dados do formulário
+
+  try {
+    // Envia os dados para o Google Apps Script
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (!response.ok) {
+      throw new Error('Erro ao enviar a mensagem. Tente novamente mais tarde.');
+    }
+
+    // Exibe o popup de sucesso
+    showSuccessPopup();
+
+    // Limpa os campos do formulário após exibir o popup
+    setTimeout(() => {
+      form.reset();
+
+      // Remove as classes "focus" e "error" de todos os campos
+      const inputs = form.querySelectorAll('.input');
+      inputs.forEach(input => {
+        const container = input.closest('.input__container');
+        container.classList.remove('focus');
+        input.classList.remove('error');
+      });
+    }, 1000);
+
+  } catch (error) {
+    // Exibe uma mensagem de erro ao usuário
+    alert(error.message);
+  }
+}
+
+// Adiciona o evento de envio ao formulário
+const contactForm = document.querySelector('.contact__form');
+if (contactForm) {
+  contactForm.addEventListener('submit', handleFormSubmission);
+}

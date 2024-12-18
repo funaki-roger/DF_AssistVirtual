@@ -1172,6 +1172,40 @@ textarea.input {
   opacity: 1;
 }
 
+/*===== Success Popup (Discreet Style) =====*/
+.success-popup {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--skin-color);
+  color: var(--body-color);
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: var(--small-font-size);
+  z-index: 1000;
+  animation: slide-up 3s ease forwards;
+}
+
+/* Slide-up animation */
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
 /* Inicialização com borda preta */
 .input {
   border: 2px solid black;
@@ -1181,13 +1215,13 @@ textarea.input {
 /* Efeito LED na borda */
 @keyframes ledBorderAnimation {
   0% {
-    border-color: red;
+    border-color: rgb(184, 60, 60);
   }
   50% {
     border-color: darkred;
   }
   100% {
-    border-color: red;
+    border-color: rgb(184, 60, 60);
   }
 }
 
@@ -1198,7 +1232,7 @@ textarea.input {
 
 /* Borda vermelha para erro (quando o campo perde o foco e está vazio) */
 .input.error {
-  border-color: red;
+  border-color: rgb(184, 60, 60);
 }
 
 /*=============== FOOTER ===============*/
